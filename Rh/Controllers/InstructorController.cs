@@ -19,14 +19,14 @@ namespace Rh.Controllers
         }
 
         [HttpPost]
-        public ActionResult CrearInstructores(int numReloj, string nombres, string apellidos)
+        public ActionResult CrearInstructores(string nombreCompleto, string compania, string stp)
         {
             using (AndreTestContext db = new AndreTestContext())
             {
                 Instructor inst = new Instructor();
-                inst.NUM_RELOJ = numReloj;
-                inst.NOMBRES = nombres;
-                inst.APELLIDOS = apellidos;
+                inst.NOMBRE_COMPLETO = nombreCompleto;
+                inst.COMPANIA = compania;
+                inst.REGISTRO_STP = stp;
                 db.Instructors.Add(inst);
                 db.SaveChanges();
                 Instructores = db.Instructors.OrderBy(x => x.ID_INSTRUCTOR).ToList();
@@ -72,9 +72,9 @@ namespace Rh.Controllers
             using (AndreTestContext db = new AndreTestContext())
             {
                 Instructor insta = db.Instructors.Find(x.ID_INSTRUCTOR);
-                insta.NUM_RELOJ = x.NUM_RELOJ;
-                insta.NOMBRES = x.NOMBRES;
-                insta.APELLIDOS = x.APELLIDOS;
+                insta.NOMBRE_COMPLETO = x.NOMBRE_COMPLETO;
+                insta.COMPANIA = x.COMPANIA;
+                insta.REGISTRO_STP = x.REGISTRO_STP;
                 db.SaveChanges();
                 return RedirectToAction("VerInstructores");
             }
