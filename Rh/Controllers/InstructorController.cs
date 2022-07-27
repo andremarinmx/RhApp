@@ -19,7 +19,7 @@ namespace Rh.Controllers
         }
 
         [HttpPost]
-        public ActionResult CrearInstructores(string nombreCompleto, string compania, string stp)
+        public ActionResult CrearInstructores(string nombreCompleto, string compania, string stp, string tipo)
         {
             using (AndreTestContext db = new AndreTestContext())
             {
@@ -27,6 +27,7 @@ namespace Rh.Controllers
                 inst.NOMBRE_COMPLETO = nombreCompleto;
                 inst.COMPANIA = compania;
                 inst.REGISTRO_STP = stp;
+                inst.TIPO = tipo;
                 db.Instructors.Add(inst);
                 db.SaveChanges();
                 Instructores = db.Instructors.OrderBy(x => x.ID_INSTRUCTOR).ToList();
@@ -67,7 +68,7 @@ namespace Rh.Controllers
         }
 
         [HttpPost]
-        public ActionResult EditarInstructor(Instructor x)
+        public ActionResult EditarInstructor(Instructor x, string tipo)
         {
             using (AndreTestContext db = new AndreTestContext())
             {
@@ -75,6 +76,8 @@ namespace Rh.Controllers
                 insta.NOMBRE_COMPLETO = x.NOMBRE_COMPLETO;
                 insta.COMPANIA = x.COMPANIA;
                 insta.REGISTRO_STP = x.REGISTRO_STP;
+                insta.TIPO = tipo;
+                //insta.TIPO = x.TIPO;
                 db.SaveChanges();
                 return RedirectToAction("VerInstructores");
             }

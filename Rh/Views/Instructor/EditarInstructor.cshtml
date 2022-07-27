@@ -29,6 +29,27 @@
     </div>
 
     <div class="form-group">
+        <label class="control-label col-md-3" for="Tipo">Tipo</label>
+        <div class="col-md-9">
+            <select class="form-control" id="tipo" name="tipo" required="required">
+                <option value="">Selecciona una Opción</option>
+                <option>Interno</option>
+                <option>Externo</option>
+                <option>Otro</option>
+            </select>
+            <span class="field-validation-valid text-danger" data-valmsg-for="Fotos" data-valmsg-replace="true"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.COMPANIA, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.COMPANIA, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.COMPANIA, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
         @Html.LabelFor(model => model.REGISTRO_STP, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.REGISTRO_STP, new { htmlAttributes = new { @class = "form-control" } })
