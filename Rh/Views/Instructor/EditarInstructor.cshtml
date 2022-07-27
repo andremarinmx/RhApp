@@ -28,16 +28,15 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group row">
         <label class="control-label col-md-3" for="Tipo">Tipo</label>
         <div class="col-md-9">
-            <select class="form-control" id="tipo" name="tipo" required="required">
-                <option value="">Selecciona una Opción</option>
-                <option>Interno</option>
-                <option>Externo</option>
-                <option>Otro</option>
+            <select class="form-control" id="tipo" name="tipo" required="required" onchange="habilitar()">
+                <option value="Interno">Interno</option>
+                <option value="Externo">Externo</option>
+                <option value="Otro">Otro</option>
             </select>
-            <span class="field-validation-valid text-danger" data-valmsg-for="Fotos" data-valmsg-replace="true"></span>
+            <span class="field-validation-valid text-danger" data-valmsg-for="Tipo" data-valmsg-replace="true"></span>
         </div>
     </div>
 
@@ -68,3 +67,24 @@
 <div>
     @Html.ActionLink("Regresar", "VerInstructores")
 </div>
+
+<script type="text/javascript">
+    function habilitar() {
+        let tipo = document.getElementById("tipo").value;
+        let COMPANIA = document.getElementById("COMPANIA");
+        let REGISTRO_STP = document.getElementById("REGISTRO_STP");
+
+        if (tipo == "Externo" || status == "Otro") {
+            COMPANIA.disabled = false;
+            REGISTRO_STP.disabled = false;
+        }
+        else {
+            if (tipo == "Interno") {
+                COMPANIA.disabled = true;
+                REGISTRO_STP.disabled = true;
+                COMPANIA.value = "JCI";
+                REGISTRO_STP.value = "";
+            }
+        }
+    }
+</script>

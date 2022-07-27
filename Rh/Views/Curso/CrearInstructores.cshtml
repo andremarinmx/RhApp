@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Rh.Models.Curso>
+
+@{
+    ViewBag.Title = "CrearInstructores";
+}
+
+<h2>CrearInstructores</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_CURSO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DURACION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CALIFICACION_MIN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPO_CURSO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLASIFICACION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AREA_TEMATICA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AREA_APLICACION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OBJETIVO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MODALIDAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMENTARIOS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_INSTRUCTOR)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_CURSO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DURACION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CALIFICACION_MIN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO_CURSO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLASIFICACION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AREA_TEMATICA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AREA_APLICACION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OBJETIVO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MODALIDAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMENTARIOS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_INSTRUCTOR)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
