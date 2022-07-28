@@ -242,7 +242,8 @@
     <Content Include="Views\Instructor\EditarInstructor.cshtml" />
     <Content Include="Views\Instructor\VerInstructores.cshtml" />
     <Content Include="Views\Curso\CrearCurso.cshtml" />
-    <Content Include="Views\Curso\CrearInstructores.cshtml" />
+    <Content Include="Views\Curso\VerCursos.cshtml" />
+    <Content Include="Views\Curso\EditarCurso.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
