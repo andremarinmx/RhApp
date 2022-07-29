@@ -1,0 +1,466 @@
+﻿@using (Html.BeginForm("CrearCurso", "Curso"))
+{
+    <div class="form-horizontal">
+        <h1>Crear Empleado</h1>
+        <h4 style="color:#0094ff;"><strong>Favor de introducir la información solicitada</strong></h4>
+
+        <hr>
+
+        <h4 style="color:#8fdc6f;"><strong>Datos Personales</strong></h4>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Nombre">Nombre</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" name="nombre" required="required" type="text" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Apellido Paterno">Apellido Paterno</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" name="apellidoPaterno" required="required" type="text" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Apellido Materno">Apellido Materno</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" name="apellidoMaterno" required="required" type="text" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="IMSS">IMSS</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" required="required"  type="number" name="imss" maxlength="11">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="RFC">RFC</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" required="required"  type="text" name="rfc" maxlength="13">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="CURP">CURP</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" required="required" type="text" name="curp" maxlength="18">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Sexo">Sexo</label>
+            <div class="col-md-9">
+                <select class="form-control" name="sexo" required="required">
+                    <option>HOMBRE</option>
+                    <option>MUJER</option>
+                    <option>INDISTINTO</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Dirección">Dirección</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" required="required"  type="text" name="direccion" maxlength="30">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Colonia">Colonia</label>
+            <div class="col-md-9">
+                <select class="form-control" name="colonia" required="required">
+                    <option>10 DE OCTUBRE</option>
+                    <option>22 DE FEBRERO</option>
+                    <option>ABASOLO</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Código postal">Código postal</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" required="required"  type="number" name="cp">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Estado">Estado</label>
+            <div class="col-md-9">
+                <select class="form-control" name="estado" required="required">
+                    <option>AGUASCALIENTES</option>
+                    <option>BAJA CALIFORNIA NORTE</option>
+                    <option>BAJA CALIFORNIA SUR</option>
+                    <option>CAMPECHE</option>
+                    <option>CHIAPAS</option>
+                    <option>CHIHUAHUA</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Municipio">Municipio</label>
+            <div class="col-md-9">
+                <select class="form-control" name="municipio" required="required">
+                    <option>CD JUÁREZ</option>
+                    <option>CHIHUAHUA</option>
+                    <option>VILLA AHUMADA</option>
+                    <option>MADERA</option>
+                    <option>PARRAL</option>
+                    <option>CASAS GRANDES</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Teléfono">Teléfono</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line"  type="number" name="telefono">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Celular">Celular</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" required="required" type="number" name="cel">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Nacionalidad">Nacionalidad</label>
+            <div class="col-md-9">
+                <select class="form-control" name="nacionalidad" required="required">
+                    <option>MEXICANA</option>
+                    <option>AMERICANA</option>
+                    <option>OTRO</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Fecha de nacimiento">Fecha de nacimiento</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" type="date" name="fechaNacimiento" placeholder="dd-mm-yyyy" value="" min="1940-01-01" max="2022-12-31" required="required">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Estado civil">Estado civil</label>
+            <div class="col-md-9">
+                <select class="form-control" name="estadoCivil" required="required">
+                    <option>CASADO (A)</option>
+                    <option>DIVORCIADO (A)</option>
+                    <option>UNION LIBRE</option>
+                    <option>SOLTERO (A)</option>
+                    <option>VIUDO (A)</option>
+                </select>
+            </div>
+        </div>
+
+        <h4 style="color:#8fdc6f;"><strong>Datos empresariales</strong></h4>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Número de reloj">Número de reloj</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" name="numReloj" required="required" type="number" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Fecha de ingreso">Fecha de ingreso</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" type="date" name="fechaIngreso" placeholder="dd-mm-yyyy" value="" min="2010-01-01" max="2050-12-31" required="required">
+            </div>
+        </div>
+
+        <div class="form-group row" hidden>
+            <label class="control-label col-md-3" for="Fecha de egreso">Fecha de egreso</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" type="date" name="fechaEgreso" placeholder="dd-mm-yyyy" value="" min="1997-01-01" max="2030-12-31">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Compañía">Compañía</label>
+            <div class="col-md-9">
+                <select class="form-control" name="compania" required="required">
+                    <option>JOHNSON CONTROLS ASC SYSTEMS SAPI DE CV</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Planta">Planta</label>
+            <div class="col-md-9">
+                <select class="form-control" name="planta" required="required">
+                    <option>CD JUÁREZ</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Departamento">Departamento</label>
+            <div class="col-md-9">
+                <select class="form-control" name="dept" required="required">
+                    <option>EZ Box</option>
+                    <option>STEEL LOUVERS</option>
+                    <option>ALUMINIUM LOUVERS</option>
+                    <option>MECHANICAL LOUVERS</option>
+                    <option>AELS</option>
+                    <option>SHEET METAL</option>
+                    <option>ANONIZADO</option>
+                    <option>EMPAQUE</option>
+                    <option>PINTURA</option>
+                    <option>PARTS PUNCH SUPPORT</option>
+                    <option>SCREEN</option>
+                    <option>SUPPORT OFFICES</option>
+                    <option>CALIDAD</option>
+                    <option>MATERIALES</option>
+                    <option>MANTENIMIENTO</option>
+                    <option>TOOL ROOM</option>
+                    <option>SHIPPING</option>
+                    <option>TOOL CRIB</option>
+                    <option>ADUANAS</option>
+                    <option>RECURSOS HUMANOS</option>
+                    <option>AMBIENTAL</option>
+                    <option>ENFERMERIA</option>
+                    <option>INTENDENCIA</option>
+                    <option>INGENIERIA DE MANUFACTURA</option>
+                    <option>ADMINISTRATIVO</option>
+                    <option>STEEL LOUVERS</option>
+                    <option>ALUMINIUM LOUVERS</option>
+                    <option>MECHANICAL LOUVERS</option>
+                    <option>CREATING AND FINISHING</option>
+                    <option>PAINT-SHOP</option>
+                    <option>PARTS PUNCH SUPPORT</option>
+                    <option>SCREEN</option>
+                    <option>SUPPORT OFFICES</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Área">Área</label>
+            <div class="col-md-9">
+                <select class="form-control" name="area" required="required">
+                    <option>ACCESS DOORS</option>
+                    <option>ADMINISTRACION</option>
+                    <option>ADUANAS</option>
+                    <option>AELS</option>
+                    <option>ALUMINIUM LOUVERS</option>
+                    <option>ANODIZADO</option>
+                    <option>BACK DRAFT</option>
+                    <option>BOX MACHINE</option>
+                    <option>CALIDAD</option>
+                    <option>COMPRAS</option>
+                    <option>DAMPERS</option>
+                    <option>DAMPERS CD36/60 </option>
+                    <option>DAMPERS CUADRADOS </option>
+                    <option>DAMPERS REDONDOS</option>
+                    <option>EHS</option>
+                    <option>EMPAQUE</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Supervisor">Supervisor</label>
+            <div class="col-md-9">
+                <select class="form-control" name="supervisor" required="required">
+                    <option>Adrian Salinas</option>
+                    <option>Adriel Acosta</option>
+                    <option>Aidee Rodriguez</option>
+                    <option>Alma Luna</option>
+                    <option>Ana Gabriela Carrizales</option>
+                    <option>Camacho Dario (Entrenamiento)</option>
+                    <option>CARREON PATRICIA (COMPRAS)</option>
+                    <option>CASTRO RICARDO  (SHEET METAL)</option>
+                    <option>CASTRO RICARDO (ALUMINIUM LOUVERS)</option>
+                    <option>CASTRO RICARDO (SCREEN)</option>
+                    <option>CENICEROS ROBERTO (FINANZAS)</option>
+                    <option>CERVANTES MELISA (AMBIENTAL)</option>
+                    <option>CHAVEZ BENNY (CALIDAD)</option>
+                    <option>Daniel Rivera</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Tipo de empleado">Tipo de empleado</label>
+            <div class="col-md-9">
+                <select class="form-control" name="tipoEmpleado" required="required">
+                    <option>OPERATIVO</option>
+                    <option>ADMINISTRATIVO</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Clase">Clase</label>
+            <div class="col-md-9">
+                <select class="form-control" name="clase" required="required">
+                    <option>DIRECTO</option>
+                    <option>INDIRECTO</option>
+                    <option>DIRECTO</option>
+                    <option>INDIRECTO-ADMINISTRATIVO</option>
+                    <option>SALARY</option>
+                    <option>INDIRECTO SOP PROD</option>
+                    <option>INDIRECTO SOP ADMVO</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Puesto">Puesto</label>
+            <div class="col-md-9">
+                <select class="form-control" name="puesto" required="required">
+                    <option>SUPERVISOR DE PRODUCCION</option>
+                    <option>TECNICO DE INGENIERIA</option>
+                    <option>TECNICO DE INGENIERIA DE KANBAN</option>
+                    <option>TECNICO  MECANICO</option>
+                    <option>TECNICO DE  TOOL ROOM</option>
+                    <option>SUPERVISOR DE TOOL MAKER</option>
+                    <option>TECNICO SR. DE  MANTENIMIENTO</option>
+                    <option>COORDINADOR DE  CONTABILIDAD</option>
+                    <option>COORDINADOR DE CALIDAD</option>
+                    <option>GERENTE DE  MATERIALES</option>
+                    <option>COORDINADOR DE  RECURSOS HUMANOS</option>
+                    <option>INGENIERO DE MANUFACTURA</option>
+                    <option>INGENIERO DE PROCESO</option>
+                    <option>JEFE DE TALLER</option>
+                    <option>PRACTICANTE</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Horario">Horario</label>
+            <div class="col-md-9">
+                <select class="form-control" name="horario" required="required">
+                    <option>L-V 6:00 a 15:30</option>
+                    <option>L-V 7:30 a 17:00</option>
+                    <option>L-V 8:30 a 18:00 </option>
+                    <option>L-V 7:00 a 16:30</option>
+                    <option>L-V 8:00 a 17:30</option>
+                    <option>L-V 15:30 a 00:00</option>
+                    <option>L-V 13:00 - 21:30</option>
+                    <option>L-V 18:00 a 02:30 </option>
+                    <option>M-S 0:00 a 06:00 </option>
+                    <option>Otro</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Locker">Locker</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" required="required" type="number" name="locker">
+            </div>
+        </div>
+
+        <h4 style="color:#8fdc6f;"><strong>Datos Bancarios</strong></h4>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Forma de pago">Forma de pago</label>
+            <div class="col-md-9">
+                <select class="form-control" name="pago" required="required">
+                    <option>DEPOSITO</option>
+                    <option>CHEQUE</option>
+                    <option>EFECTIVO</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Banco">Banco</label>
+            <div class="col-md-9">
+                <select class="form-control" name="banco" required="required">
+                    <option>BANORTE</option>
+                    <option>BBVA BANCOMER</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Número de la tarjeta">Número de la tarjeta</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" type="number" name="numTarjeta">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Salario">Salario</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" type="number" name="salario">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Guardar" class="btn btn-success">
+            </div>
+        </div>
+
+        <h4 style="color:#8fdc6f;"><strong>Datos académicos</strong></h4>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Escolaridad">Escolaridad</label>
+            <div class="col-md-9">
+                <select class="form-control" name="nivelEscolar" required="required">
+                    <option>NINGUNO</option>
+                    <option>PRIMARIA</option>
+                    <option>SECUNDARIA</option>
+                    <option>PREPARATORIA</option>
+                    <option>UNIVERISIDAD</option>
+                    <option>MAESTRIA</option>
+                    <option>DOCTORADO</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Nombre">Nombre</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" type="text" name="nombreEscuela">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Dirección">Dirección</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" type="text" name="direccionEscuela">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Dirección">Dirección</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" type="text" name="direccionEscuela">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Fecha de ingreso">Fecha de egreso</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" type="date" name="egresoEscuela" placeholder="dd-mm-yyyy" value="" min="1950-01-01" max="2030-12-31">
+            </div>
+        </div>
+
+        <h4 style="color:#8fdc6f;"><strong>Contacto de emergencia</strong></h4>
+
+
+
+
+    </div>
+}

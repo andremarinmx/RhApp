@@ -1,0 +1,327 @@
+﻿@model IEnumerable<Rh.Models.Empleado>
+
+@{
+    ViewBag.Title = "VerEmpleados";
+}
+
+<h2>VerEmpleados</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_EMPLEADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APELLIDO_PATERNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APELLIDO_MATERNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUM_RELOJ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FOTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_INGRESO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_EGRESO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COMPANIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PLANTA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEPARTAMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUPERVISOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AREA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLASE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PUESTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TURNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HORARIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IMSS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RFC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CURP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SEXO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GAFETE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FORMA_PAGO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BANCO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NUMERO_TARJETA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SALARIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIRECCION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COLONIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MUNICIPIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CODIGO_POSTAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TELEFONO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CEL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NACIONALIDAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LUGAR_NACIMIENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FECHA_NACIMIENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTADO_CIVIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOCKER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMERGENCIA_NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMERGENCIA_APELLIDO_PATERNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMERGENCIA_APELLIDO_MATERNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMERGENCIA_PARENTEZCO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMERGENCIA_TELEFONO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMERGENCIA_DIRECCION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NIVEL_ESCOLAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE_ESCUELA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIRECCION_ESCUELA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EGRESO_ESCUELA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_CURSO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_EMPLEADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APELLIDO_PATERNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APELLIDO_MATERNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_RELOJ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FOTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_INGRESO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_EGRESO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COMPANIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PLANTA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEPARTAMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUPERVISOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AREA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLASE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PUESTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TURNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HORARIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IMSS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RFC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CURP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEXO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GAFETE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FORMA_PAGO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BANCO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUMERO_TARJETA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SALARIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIRECCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COLONIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MUNICIPIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CODIGO_POSTAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TELEFONO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CEL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NACIONALIDAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LUGAR_NACIMIENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_NACIMIENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO_CIVIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOCKER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMERGENCIA_NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMERGENCIA_APELLIDO_PATERNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMERGENCIA_APELLIDO_MATERNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMERGENCIA_PARENTEZCO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMERGENCIA_TELEFONO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMERGENCIA_DIRECCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NIVEL_ESCOLAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE_ESCUELA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIRECCION_ESCUELA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EGRESO_ESCUELA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID_CURSO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

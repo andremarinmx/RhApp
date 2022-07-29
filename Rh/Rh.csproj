@@ -154,12 +154,16 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CursoController.cs" />
+    <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Curso.cs">
+      <DependentUpon>ModelRh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Empleado.cs">
       <DependentUpon>ModelRh.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Instructor.cs">
@@ -244,6 +248,8 @@
     <Content Include="Views\Curso\CrearCurso.cshtml" />
     <Content Include="Views\Curso\VerCursos.cshtml" />
     <Content Include="Views\Curso\EditarCurso.cshtml" />
+    <Content Include="Views\Empleado\CrearEmpleado.cshtml" />
+    <Content Include="Views\Empleado\VerEmpleados.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
