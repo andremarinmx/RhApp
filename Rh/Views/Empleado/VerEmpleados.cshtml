@@ -4,11 +4,11 @@
     ViewBag.Title = "VerEmpleados";
 }
 
-<h2>VerEmpleados</h2>
+<h2>Empleados</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<h4 style="color:#0094ff;">
+    <strong> @Html.ActionLink("Crear", "CrearEmpleado")</strong>
+</h4>
 <table class="table">
     <tr>
         <th>
@@ -99,25 +99,22 @@
             @Html.DisplayNameFor(model => model.COLONIA)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.NACIONALIDAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTADO)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.MUNICIPIO)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CODIGO_POSTAL)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ESTADO)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.TELEFONO)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CEL)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NACIONALIDAD)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LUGAR_NACIMIENTO)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.FECHA_NACIMIENTO)
@@ -254,25 +251,22 @@
             @Html.DisplayFor(modelItem => item.COLONIA)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.NACIONALIDAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.MUNICIPIO)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CODIGO_POSTAL)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ESTADO)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.TELEFONO)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CEL)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NACIONALIDAD)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LUGAR_NACIMIENTO)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.FECHA_NACIMIENTO)
@@ -317,9 +311,10 @@
             @Html.DisplayFor(modelItem => item.ID_CURSO)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            <h5 style="color:#0094ff;">
+                @Html.ActionLink("Editar", "EditarEmpleado", new { id = item.ID_EMPLEADO })
+                @Html.ActionLink("Eliminar", "EliminarEmpleado", new { id = item.ID_EMPLEADO })
+            </h5>
         </td>
     </tr>
 }
