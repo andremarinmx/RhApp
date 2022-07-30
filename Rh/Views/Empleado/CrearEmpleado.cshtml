@@ -1,4 +1,4 @@
-﻿@using (Html.BeginForm("CrearCurso", "Curso"))
+﻿@using (Html.BeginForm("CrearEmpleado", "Empleado"))
 {
     <div class="form-horizontal">
         <h1>Crear Empleado</h1>
@@ -32,7 +32,7 @@
         <div class="form-group row">
             <label class="control-label col-md-3" for="IMSS">IMSS</label>
             <div class="col-md-9">
-                <input class="form-control text-box single-line" required="required"  type="number" name="imss" maxlength="11">
+                <input class="form-control text-box single-line" required="required"  type="text" name="imss" maxlength="11">
             </div>
         </div>
 
@@ -82,7 +82,18 @@
         <div class="form-group row">
             <label class="control-label col-md-3" for="Código postal">Código postal</label>
             <div class="col-md-9">
-                <input class="form-control text-box single-line" required="required"  type="number" name="cp">
+                <input class="form-control text-box single-line" required="required"  type="number" name="cp" maxlength="5">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Nacionalidad">Nacionalidad</label>
+            <div class="col-md-9">
+                <select class="form-control" name="nacionalidad" required="required">
+                    <option>MEXICANA</option>
+                    <option>AMERICANA</option>
+                    <option>OTRO</option>
+                </select>
             </div>
         </div>
 
@@ -117,7 +128,7 @@
         <div class="form-group row">
             <label class="control-label col-md-3" for="Teléfono">Teléfono</label>
             <div class="col-md-9">
-                <input class="form-control text-box single-line"  type="number" name="telefono">
+                <input class="form-control text-box single-line" required="required" type="number" name="telefono" >
             </div>
         </div>
 
@@ -125,17 +136,6 @@
             <label class="control-label col-md-3" for="Celular">Celular</label>
             <div class="col-md-9">
                 <input class="form-control text-box single-line" required="required" type="number" name="cel">
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <label class="control-label col-md-3" for="Nacionalidad">Nacionalidad</label>
-            <div class="col-md-9">
-                <select class="form-control" name="nacionalidad" required="required">
-                    <option>MEXICANA</option>
-                    <option>AMERICANA</option>
-                    <option>OTRO</option>
-                </select>
             </div>
         </div>
 
@@ -273,11 +273,6 @@
             <label class="control-label col-md-3" for="Supervisor">Supervisor</label>
             <div class="col-md-9">
                 <select class="form-control" name="supervisor" required="required">
-                    <option>Adrian Salinas</option>
-                    <option>Adriel Acosta</option>
-                    <option>Aidee Rodriguez</option>
-                    <option>Alma Luna</option>
-                    <option>Ana Gabriela Carrizales</option>
                     <option>Camacho Dario (Entrenamiento)</option>
                     <option>CARREON PATRICIA (COMPRAS)</option>
                     <option>CASTRO RICARDO  (SHEET METAL)</option>
@@ -286,7 +281,6 @@
                     <option>CENICEROS ROBERTO (FINANZAS)</option>
                     <option>CERVANTES MELISA (AMBIENTAL)</option>
                     <option>CHAVEZ BENNY (CALIDAD)</option>
-                    <option>Daniel Rivera</option>
                     <option>Otro</option>
                 </select>
             </div>
@@ -406,12 +400,6 @@
             </div>
         </div>
 
-        <div class="form-group row">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Guardar" class="btn btn-success">
-            </div>
-        </div>
-
         <h4 style="color:#8fdc6f;"><strong>Datos académicos</strong></h4>
 
         <div class="form-group row">
@@ -425,6 +413,7 @@
                     <option>UNIVERISIDAD</option>
                     <option>MAESTRIA</option>
                     <option>DOCTORADO</option>
+                    <option>Otro</option>
                 </select>
             </div>
         </div>
@@ -444,13 +433,6 @@
         </div>
 
         <div class="form-group row">
-            <label class="control-label col-md-3" for="Dirección">Dirección</label>
-            <div class="col-md-9">
-                <input class="form-control text-box single-line" type="text" name="direccionEscuela">
-            </div>
-        </div>
-
-        <div class="form-group row">
             <label class="control-label col-md-3" for="Fecha de ingreso">Fecha de egreso</label>
             <div class="col-md-9">
                 <input class="form-control text-box single-line" type="date" name="egresoEscuela" placeholder="dd-mm-yyyy" value="" min="1950-01-01" max="2030-12-31">
@@ -459,8 +441,62 @@
 
         <h4 style="color:#8fdc6f;"><strong>Contacto de emergencia</strong></h4>
 
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Nombre">Nombre</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" type="text" name="emerNombre">
+            </div>
+        </div>
 
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Apellido paterno">Apellido paterno</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" type="text" name="emerApellidoPaterno">
+            </div>
+        </div>
 
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Apellido materno">Apellido materno</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" type="text" name="emerApellidoMaterno">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Parentezco">Parentezco</label>
+            <div class="col-md-9">
+                <select class="form-control" name="emerParentezco" required="required">
+                    <option>MAMÁ</option>
+                    <option>PAPÁ</option>
+                    <option>ESPOSO(A)</option>
+                    <option>HIJO(A)</option>
+                    <option>TIO(A)</option>
+                    <option>ABUELO(A)</option>
+                    <option>PRIMO(A)</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Teléfono">Teléfono</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" type="tel" name="emerTelefono">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Dirección">Dirección</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" type="text" name="emerDireccion" maxlength="30">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Guardar" class="btn btn-success">
+            </div>
+        </div>
 
     </div>
 }
