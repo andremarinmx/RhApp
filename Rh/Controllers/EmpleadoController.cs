@@ -61,7 +61,8 @@ namespace Rh.Controllers
             string emerApellidoMaterno,
             string emerParentezco,
             long emerTelefono,
-            string emerDireccion
+            string emerDireccion,
+            string fotografia
         )
         {
             using (AndreTestContext db = new AndreTestContext())
@@ -110,6 +111,7 @@ namespace Rh.Controllers
                 emp.EMERGENCIA_PARENTEZCO = emerParentezco;
                 emp.EMERGENCIA_TELEFONO = emerTelefono;
                 emp.EMERGENCIA_DIRECCION = emerDireccion;
+                emp.FOTO = fotografia;
                 db.Empleadoes.Add(emp);
                 db.SaveChanges();
                 Empleado = db.Empleadoes.OrderBy(x => x.ID_EMPLEADO).ToList();
