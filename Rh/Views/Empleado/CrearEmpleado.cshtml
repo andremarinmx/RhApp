@@ -1,6 +1,7 @@
 ﻿@using (Html.BeginForm("CrearEmpleado", "Empleado"))
 {
     <div class="form-horizontal">
+
         <h1>Crear Empleado</h1>
         <h4 style="color:#0094ff;"><strong>Favor de introducir la información solicitada</strong></h4>
 
@@ -32,7 +33,7 @@
         <div class="form-group row">
             <label class="control-label col-md-3" for="IMSS">IMSS</label>
             <div class="col-md-9">
-                <input class="form-control text-box single-line" required="required"  type="text" name="imss" maxlength="11">
+                <input class="form-control text-box single-line" required="required"  type="number" name="imss" maxlength="11">
             </div>
         </div>
 
@@ -142,7 +143,7 @@
         <div class="form-group row">
             <label class="control-label col-md-3" for="Fecha de nacimiento">Fecha de nacimiento</label>
             <div class="col-md-9">
-                <input class="form-control text-box single-line" type="date" name="fechaNacimiento" placeholder="dd-mm-yyyy" value="" min="1940-01-01" max="2022-12-31" required="required">
+                <input class="form-control text-box single-line" required="required" type="date" name="fechaNacimiento" placeholder="dd-mm-yyyy" value="" min="1940-01-01" max="2022-12-31">
             </div>
         </div>
 
@@ -171,7 +172,7 @@
         <div class="form-group row">
             <label class="control-label col-md-3" for="Fecha de ingreso">Fecha de ingreso</label>
             <div class="col-md-9">
-                <input class="form-control text-box single-line" type="date" name="fechaIngreso" placeholder="dd-mm-yyyy" value="" min="2010-01-01" max="2050-12-31" required="required">
+                <input class="form-control text-box single-line" type="date" required="required" name="fechaIngreso" placeholder="dd-mm-yyyy" value="" min="2010-01-01" max="2050-12-31" required="required">
             </div>
         </div>
 
@@ -396,7 +397,7 @@
         <div class="form-group row">
             <label class="control-label col-md-3" for="Salario">Salario</label>
             <div class="col-md-9">
-                <input class="form-control text-box single-line" type="number" name="salario">
+                <input class="form-control text-box single-line" required="required" type="number" name="salario">
             </div>
         </div>
 
@@ -421,21 +422,21 @@
         <div class="form-group row">
             <label class="control-label col-md-3" for="Nombre">Nombre</label>
             <div class="col-md-9">
-                <input class="form-control text-box single-line" type="text" name="nombreEscuela">
+                <input class="form-control text-box single-line" required="required" type="text" name="nombreEscuela">
             </div>
         </div>
 
         <div class="form-group row">
             <label class="control-label col-md-3" for="Dirección">Dirección</label>
             <div class="col-md-9">
-                <input class="form-control text-box single-line" type="text" name="direccionEscuela">
+                <input class="form-control text-box single-line" required="required" type="text" name="direccionEscuela">
             </div>
         </div>
 
         <div class="form-group row">
             <label class="control-label col-md-3" for="Fecha de ingreso">Fecha de egreso</label>
             <div class="col-md-9">
-                <input class="form-control text-box single-line" type="date" name="egresoEscuela" placeholder="dd-mm-yyyy" value="" min="1950-01-01" max="2030-12-31">
+                <input class="form-control text-box single-line" required="required" type="date" name="egresoEscuela" placeholder="dd-mm-yyyy" value="" min="1950-01-01" max="2030-12-31">
             </div>
         </div>
 
@@ -444,21 +445,21 @@
         <div class="form-group row">
             <label class="control-label col-md-3" for="Nombre">Nombre</label>
             <div class="col-md-9">
-                <input class="form-control text-box single-line" type="text" name="emerNombre">
+                <input class="form-control text-box single-line" required="required" type="text" name="emerNombre">
             </div>
         </div>
 
         <div class="form-group row">
             <label class="control-label col-md-3" for="Apellido paterno">Apellido paterno</label>
             <div class="col-md-9">
-                <input class="form-control text-box single-line" type="text" name="emerApellidoPaterno">
+                <input class="form-control text-box single-line" required="required" type="text" name="emerApellidoPaterno">
             </div>
         </div>
 
         <div class="form-group row">
             <label class="control-label col-md-3" for="Apellido materno">Apellido materno</label>
             <div class="col-md-9">
-                <input class="form-control text-box single-line" type="text" name="emerApellidoMaterno">
+                <input class="form-control text-box single-line" required="required" type="text" name="emerApellidoMaterno">
             </div>
         </div>
 
@@ -481,14 +482,30 @@
         <div class="form-group row">
             <label class="control-label col-md-3" for="Teléfono">Teléfono</label>
             <div class="col-md-9">
-                <input class="form-control text-box single-line" type="tel" name="emerTelefono">
+                <input class="form-control text-box single-line" required="required" type="tel" name="emerTelefono">
             </div>
         </div>
 
         <div class="form-group row">
             <label class="control-label col-md-3" for="Dirección">Dirección</label>
             <div class="col-md-9">
-                <input class="form-control text-box single-line" type="text" name="emerDireccion" maxlength="30">
+                <input class="form-control text-box single-line" required="required" type="text" name="emerDireccion" maxlength="30">
+            </div>
+        </div>
+
+        <h4 style="color:#8fdc6f;"><strong>Fotografía</strong></h4>
+
+        <div class="form-group row">
+            <label class="control-label col-md-3" for="Fotografía">Fotografía</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" required="required" type="file" onchange="imagenAbase64(this)" accept="image/png, image/jpeg, image/jpg"/>
+            </div>
+        </div>
+
+        <div class="form-group row" hidden>
+            <label class="control-label col-md-3" for="Fotografía">Fotografía</label>
+            <div class="col-md-9">
+                <input class="form-control text-box single-line" id="fotografia" type="text" name="fotografia" />
             </div>
         </div>
 
@@ -500,3 +517,20 @@
 
     </div>
 }
+
+<script type="text/javascript">
+
+    let imagenbase64 = "";
+    let foto = document.getElementById("fotografia");
+
+    function imagenAbase64(element) {
+        var file = element.files[0];
+        var reader = new FileReader();
+        reader.onloadend = function () {
+            imagebase64 = reader.result;
+            foto.value = imagebase64;
+        }
+        reader.readAsDataURL(file);
+    }
+
+</script>

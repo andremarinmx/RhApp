@@ -11,32 +11,95 @@
 </h4>
 <table class="table">
     <tr>
+        <th hidden>
+            <!-- @Html.DisplayNameFor(model => model.ID_EMPLEADO)  -->
+            ID
+        </th>
         <th>
-            @Html.DisplayNameFor(model => model.ID_EMPLEADO)
+            <!-- @Html.DisplayNameFor(model => model.FOTO) -->
+            FOTOGRAFÍA
+        </th>
+        <th>
+            <h4 style="color:#8fdc6f;"><strong>Datos personales</strong></h4>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.NOMBRE)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.APELLIDO_PATERNO)
+            <!-- @Html.DisplayNameFor(model => model.APELLIDO_PATERNO)  -->
+            APELLIDO PATERNO
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.APELLIDO_MATERNO)
+            <!-- @Html.DisplayNameFor(model => model.APELLIDO_MATERNO)  -->
+            APELLIDO MATERNO
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NUM_RELOJ)
+            <!-- @Html.DisplayNameFor(model => model.IMSS) -->
+            NSS
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FOTO)
+            @Html.DisplayNameFor(model => model.RFC)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FECHA_INGRESO)
+            @Html.DisplayNameFor(model => model.CURP)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FECHA_EGRESO)
+            @Html.DisplayNameFor(model => model.SEXO)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.COMPANIA)
+            <!-- @Html.DisplayNameFor(model => model.DIRECCION) -->
+            DIRECCIÓN
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.COLONIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NACIONALIDAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MUNICIPIO)
+        </th>
+        <th>
+            <!-- @Html.DisplayNameFor(model => model.CODIGO_POSTAL) -->
+            CÓDIGO POSTAL
+        </th>
+        <th>
+            <!-- @Html.DisplayNameFor(model => model.TELEFONO) -->
+            TELÉFONO
+        </th>
+        <th>
+            <!-- @Html.DisplayNameFor(model => model.CEL) -->
+            CELULAR
+        </th>
+        <th>
+            <!-- @Html.DisplayNameFor(model => model.FECHA_NACIMIENTO) -->
+            NACIMIENTO
+        </th>
+        <th>
+            <!-- @Html.DisplayNameFor(model => model.ESTADO_CIVIL) -->
+            ESTADO CIVÍL
+        </th>
+        <th>
+            <h4 style="color:#8fdc6f;"><strong>Datos empresariales</strong></h4>
+        </th>
+        <th>
+            <!-- @Html.DisplayNameFor(model => model.NUM_RELOJ)  -->
+            NÚMERO RELOJ
+        </th>
+        <th>
+            <!-- @Html.DisplayNameFor(model => model.FECHA_INGRESO) -->
+            INGRESO
+        </th>
+        <th>
+            <!-- @Html.DisplayNameFor(model => model.FECHA_EGRESO) -->
+            EGRESO
+        </th>
+        <th>
+            <!-- @Html.DisplayNameFor(model => model.COMPANIA) -->
+            COMPAÑÍA
         </th>
         <th>
             @Html.DisplayNameFor(model => model.PLANTA)
@@ -48,7 +111,8 @@
             @Html.DisplayNameFor(model => model.SUPERVISOR)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.AREA)
+            <!-- @Html.DisplayNameFor(model => model.AREA) -->
+            ÁREA
         </th>
         <th>
             @Html.DisplayNameFor(model => model.TIPO)
@@ -66,96 +130,75 @@
             @Html.DisplayNameFor(model => model.HORARIO)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.IMSS)
+            @Html.DisplayNameFor(model => model.LOCKER)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.RFC)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CURP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SEXO)
-        </th>
-        <th>
+        <th hidden>
             @Html.DisplayNameFor(model => model.GAFETE)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FORMA_PAGO)
+            <h4 style="color:#8fdc6f;"><strong>Datos bancarios</strong></h4>
+        </th>
+        <th>
+            <!-- @Html.DisplayNameFor(model => model.FORMA_PAGO) -->
+            FORMA DE PAGO
         </th>
         <th>
             @Html.DisplayNameFor(model => model.BANCO)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NUMERO_TARJETA)
+            <!-- @Html.DisplayNameFor(model => model.NUMERO_TARJETA) -->
+            NÚMERO TARJETA
         </th>
         <th>
             @Html.DisplayNameFor(model => model.SALARIO)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DIRECCION)
+            <h4 style="color:#8fdc6f;"><strong>Contacto de emergencia</strong></h4>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.COLONIA)
+            <!-- @Html.DisplayNameFor(model => model.EMERGENCIA_NOMBRE) -->
+            NOMBRE
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NACIONALIDAD)
+            <!-- @Html.DisplayNameFor(model => model.EMERGENCIA_APELLIDO_PATERNO) -->
+            APELLIDO PATERNO
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ESTADO)
+            <!-- @Html.DisplayNameFor(model => model.EMERGENCIA_APELLIDO_MATERNO) -->
+            APELLIDO MATERNO
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MUNICIPIO)
+            <!-- @Html.DisplayNameFor(model => model.EMERGENCIA_PARENTEZCO) -->
+            PARENTESCO
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CODIGO_POSTAL)
+            <!-- @Html.DisplayNameFor(model => model.EMERGENCIA_TELEFONO) -->
+            TELÉFONO
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TELEFONO)
+            <!-- @Html.DisplayNameFor(model => model.EMERGENCIA_DIRECCION) -->
+            DIRECCIÓN
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CEL)
+            <h4 style="color:#8fdc6f;"><strong>Datos académicos</strong></h4>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FECHA_NACIMIENTO)
+            <!-- @Html.DisplayNameFor(model => model.NIVEL_ESCOLAR) -->
+            NIVEL ESCOLAR
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ESTADO_CIVIL)
+            <!-- @Html.DisplayNameFor(model => model.NOMBRE_ESCUELA) -->
+            NOMBRE
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LOCKER)
+            <!-- @Html.DisplayNameFor(model => model.DIRECCION_ESCUELA) -->
+            DIRECCIÓN
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EMERGENCIA_NOMBRE)
+            <!-- @Html.DisplayNameFor(model => model.EGRESO_ESCUELA) -->
+            EGRESO
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EMERGENCIA_APELLIDO_PATERNO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EMERGENCIA_APELLIDO_MATERNO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EMERGENCIA_PARENTEZCO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EMERGENCIA_TELEFONO)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EMERGENCIA_DIRECCION)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NIVEL_ESCOLAR)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NOMBRE_ESCUELA)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DIRECCION_ESCUELA)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EGRESO_ESCUELA)
-        </th>
-        <th>
+        <th hidden>
             @Html.DisplayNameFor(model => model.ID_CURSO)
         </th>
         <th></th>
@@ -163,9 +206,15 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
+        <td hidden>
             @Html.DisplayFor(modelItem => item.ID_EMPLEADO)
         </td>
+        <td>
+            <a target="_blank" href="@Html.DisplayFor(modelItem => item.FOTO)">
+                <img src="@Html.DisplayFor(modelItem => item.FOTO)" height="130px" width="150px" style="border-radius:6px;" />
+            </a>
+        </td>
+        <td></td>
         <td>
             @Html.DisplayFor(modelItem => item.NOMBRE)
         </td>
@@ -176,10 +225,50 @@
             @Html.DisplayFor(modelItem => item.APELLIDO_MATERNO)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.NUM_RELOJ)
+            @Html.DisplayFor(modelItem => item.IMSS)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.FOTO)
+            @Html.DisplayFor(modelItem => item.RFC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CURP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SEXO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIRECCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.COLONIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NACIONALIDAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MUNICIPIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CODIGO_POSTAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TELEFONO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CEL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FECHA_NACIMIENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESTADO_CIVIL)
+        </td>
+        <td></td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NUM_RELOJ)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.FECHA_INGRESO)
@@ -218,20 +307,12 @@
             @Html.DisplayFor(modelItem => item.HORARIO)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.IMSS)
+            @Html.DisplayFor(modelItem => item.LOCKER)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.RFC)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CURP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SEXO)
-        </td>
-        <td>
+        <td hidden>
             @Html.DisplayFor(modelItem => item.GAFETE)
         </td>
+        <td></td>
         <td>
             @Html.DisplayFor(modelItem => item.FORMA_PAGO)
         </td>
@@ -244,39 +325,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.SALARIO)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DIRECCION)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.COLONIA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NACIONALIDAD)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ESTADO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MUNICIPIO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CODIGO_POSTAL)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TELEFONO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CEL)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FECHA_NACIMIENTO)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ESTADO_CIVIL)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LOCKER)
-        </td>
+        <td></td>
         <td>
             @Html.DisplayFor(modelItem => item.EMERGENCIA_NOMBRE)
         </td>
@@ -295,6 +344,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.EMERGENCIA_DIRECCION)
         </td>
+        <td></td>
         <td>
             @Html.DisplayFor(modelItem => item.NIVEL_ESCOLAR)
         </td>
@@ -307,7 +357,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.EGRESO_ESCUELA)
         </td>
-        <td>
+        <td hidden>
             @Html.DisplayFor(modelItem => item.ID_CURSO)
         </td>
         <td>
