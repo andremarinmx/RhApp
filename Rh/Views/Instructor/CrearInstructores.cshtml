@@ -48,21 +48,23 @@
 }
 <script type="text/javascript">
     function habilitar() {
-        let tipo = document.getElementById("tipo").value;
+        let tipo = document.getElementById("tipo");
         let compania = document.getElementById("compania");
         let stp = document.getElementById("stp");
+        let trabajo = document.getElementById("trabajo");
 
-        if (tipo == "Externo" || status == "Otro") {
+        if (tipo.value == "Externo" || tipo.value == "Otro") {
             compania.disabled = false;
             stp.disabled = false;
             compania.value = "";
         }
         else {
-            if (tipo == "Interno") {
+            if (tipo.value == "Interno") {
                 compania.disabled = true;
                 stp.disabled = true;
                 compania.value = "JCI";
             }
         }
+        trabajo.value = compania.value;
     }
 </script>

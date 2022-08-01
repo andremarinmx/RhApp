@@ -19,13 +19,13 @@ namespace Rh.Controllers
         }
 
         [HttpPost]
-        public ActionResult CrearInstructores(string nombreCompleto, string compania, string stp, string tipo)
+        public ActionResult CrearInstructores(string nombreCompleto, string trabajo, string stp, string tipo)
         {
             using (AndreTestContext db = new AndreTestContext())
             {
                 Instructor inst = new Instructor();
                 inst.NOMBRE_COMPLETO = nombreCompleto;
-                inst.COMPANIA = compania;
+                inst.COMPANIA = trabajo;
                 inst.REGISTRO_STP = stp;
                 inst.TIPO = tipo;
                 db.Instructors.Add(inst);
