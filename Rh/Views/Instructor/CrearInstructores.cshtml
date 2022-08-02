@@ -16,6 +16,7 @@
             <label class="control-label col-md-3" for="Tipo">Tipo</label>
             <div class="col-md-9">
                 <select class="form-control" id="tipo" name="tipo" required="required" onchange="habilitar()">
+                    <option value="">Selecciona el tipo</option>
                     <option value="Interno">Interno</option>
                     <option value="Externo">Externo</option>
                     <option value="Otro">Otro</option>
@@ -27,14 +28,14 @@
         <div class="form-group row">
             <label class="control-label col-md-3" for="compania">Compañía</label>
             <div class="col-md-9">
-                <input class="form-control text-box single-line" name="compania" id="compania" required="required" type="text" value="JCI" disabled/>
+                <input class="form-control text-box single-line" name="compania" id="compania" required="required" type="text" />
             </div>
         </div>
 
         <div class="form-group row">
             <label class="control-label col-md-3" for="stp">STP</label>
             <div class="col-md-9">
-                <input class="form-control text-box single-line" name="stp" id="stp" required="required" type="text" disabled/>
+                <input class="form-control text-box single-line" name="stp" id="stp" required="required" type="text" />
             </div>
         </div>
 
@@ -51,20 +52,16 @@
         let tipo = document.getElementById("tipo");
         let compania = document.getElementById("compania");
         let stp = document.getElementById("stp");
-        let trabajo = document.getElementById("trabajo");
 
         if (tipo.value == "Externo" || tipo.value == "Otro") {
-            compania.disabled = false;
-            stp.disabled = false;
             compania.value = "";
+            stp.disabled = false;
         }
         else {
             if (tipo.value == "Interno") {
-                compania.disabled = true;
-                stp.disabled = true;
                 compania.value = "JCI";
+                stp.disabled = true;
             }
         }
-        trabajo.value = compania.value;
     }
 </script>
