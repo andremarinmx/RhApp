@@ -20,7 +20,14 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Nombre">Nombre Completo</label>
+        <div class="col-md-9">
+            <input class="form-control text-box single-line" id ="nombreCompleto" name="nombreCompleto" required="required" type="text" />
+        </div>
+    </div>
+
+    <div class="form-group" hidden>
         @Html.LabelFor(model => model.NOMBRE_COMPLETO, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.NOMBRE_COMPLETO, new { htmlAttributes = new { @class = "form-control" } })
@@ -31,7 +38,7 @@
     <div class="form-group row">
         <label class="control-label col-md-3" for="Tipo">Tipo</label>
         <div class="col-md-9">
-            <select class="form-control" id="tipo" name="tipo" required="required" onchange="habilitar()">
+            <select class="form-control" id="tipo" name="tipo" required="required">
                 <option value="Interno">Interno</option>
                 <option value="Externo">Externo</option>
                 <option value="Otro">Otro</option>
@@ -40,7 +47,22 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group" hidden>
+        @Html.LabelFor(model => model.TIPO, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.TIPO, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.TIPO, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="compania">Compañía</label>
+        <div class="col-md-9">
+            <input class="form-control text-box single-line" name="compania" id="compania" required="required" type="text" />
+        </div>
+    </div>
+
+    <div class="form-group" hidden>
         @Html.LabelFor(model => model.COMPANIA, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.COMPANIA, new { htmlAttributes = new { @class = "form-control" } })
@@ -48,7 +70,14 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="stp">STP</label>
+        <div class="col-md-9">
+            <input class="form-control text-box single-line" name="stp" id="stp" required="required" type="text" />
+        </div>
+    </div>
+
+    <div class="form-group" hidden>
         @Html.LabelFor(model => model.REGISTRO_STP, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.REGISTRO_STP, new { htmlAttributes = new { @class = "form-control" } })
@@ -69,22 +98,14 @@
 </div>
 
 <script type="text/javascript">
-    function habilitar() {
-        let tipo = document.getElementById("tipo").value;
-        let COMPANIA = document.getElementById("COMPANIA");
-        let REGISTRO_STP = document.getElementById("REGISTRO_STP");
 
-        if (tipo == "Externo" || status == "Otro") {
-            COMPANIA.disabled = false;
-            REGISTRO_STP.disabled = false;
-        }
-        else {
-            if (tipo == "Interno") {
-                COMPANIA.disabled = true;
-                REGISTRO_STP.disabled = true;
-                COMPANIA.value = "JCI";
-                REGISTRO_STP.value = "";
-            }
-        }
-    }
+    let nombreModel = document.getElementById("NOMBRE_COMPLETO").value;
+    let tipoModel = document.getElementById("TIPO").value;
+    let companiaModel = document.getElementById("COMPANIA").value;
+    let stpModel = document.getElementById("REGISTRO_STP").value;
+
+    let nombre = document.getElementById("nombreCompleto").value = nombreModel;
+    let tipo = document.getElementById("tipo").value = tipoModel;
+    let compania = document.getElementById("compania").value = companiaModel;
+    let stp = document.getElementById("stp").value = stpModel;
 </script>

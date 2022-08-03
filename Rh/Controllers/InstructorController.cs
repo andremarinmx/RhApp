@@ -68,16 +68,15 @@ namespace Rh.Controllers
         }
 
         [HttpPost]
-        public ActionResult EditarInstructor(Instructor x, string tipo)
+        public ActionResult EditarInstructor(int ID_INSTRUCTOR, string nombreCompleto, string compania, string stp, string tipo)
         {
             using (AndreTestContext db = new AndreTestContext())
             {
-                Instructor insta = db.Instructors.Find(x.ID_INSTRUCTOR);
-                insta.NOMBRE_COMPLETO = x.NOMBRE_COMPLETO;
-                insta.COMPANIA = x.COMPANIA;
-                insta.REGISTRO_STP = x.REGISTRO_STP;
+                Instructor insta = db.Instructors.Find(ID_INSTRUCTOR);
+                insta.NOMBRE_COMPLETO = nombreCompleto;
+                insta.COMPANIA = compania;
+                insta.REGISTRO_STP = stp;
                 insta.TIPO = tipo;
-                //insta.TIPO = x.TIPO;
                 db.SaveChanges();
                 return RedirectToAction("VerInstructores");
             }
