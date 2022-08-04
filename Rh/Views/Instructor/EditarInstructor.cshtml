@@ -38,7 +38,7 @@
     <div class="form-group row">
         <label class="control-label col-md-3" for="Tipo">Tipo</label>
         <div class="col-md-9">
-            <select class="form-control" id="tipo" name="tipo" required="required">
+            <select class="form-control" id="tipo" name="tipo" required="required" onchange="habilitar()">
                 <option value="Interno">Interno</option>
                 <option value="Externo">Externo</option>
                 <option value="Otro">Otro</option>
@@ -104,8 +104,36 @@
     let companiaModel = document.getElementById("COMPANIA").value;
     let stpModel = document.getElementById("REGISTRO_STP").value;
 
-    let nombre = document.getElementById("nombreCompleto").value = nombreModel;
-    let tipo = document.getElementById("tipo").value = tipoModel;
-    let compania = document.getElementById("compania").value = companiaModel;
-    let stp = document.getElementById("stp").value = stpModel;
+    let nombre = document.getElementById("nombreCompleto");
+    let tipo = document.getElementById("tipo");
+    let compania = document.getElementById("compania");
+    let stp = document.getElementById("stp");
+
+    nombre.value = nombreModel;
+    tipo.value = tipoModel;
+    compania.value = companiaModel;
+    stp.value = stpModel;
+
+    if (tipo.value == "Interno") {
+        habilitar();
+    }
+
+    function habilitar() {
+        let tipo = document.getElementById("tipo");
+        let compania = document.getElementById("compania");
+        let stp = document.getElementById("stp");
+
+        if (tipo.value == "Externo" || tipo.value == "Otro") {
+            compania.value = "";
+            stp.disabled = false;
+        }
+        else {
+            if (tipo.value == "Interno") {
+                compania.value = "JCI";
+                stp.disabled = true;
+                stp.value = "";
+            }
+        }
+    }
+
 </script>
