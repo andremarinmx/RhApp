@@ -19,13 +19,23 @@ namespace Rh.Controllers
         }
 
         [HttpPost]
-        public ActionResult CrearCurso(string nombre, int duracion, int calificacion, string tipo, string clasificacion, string areaTematica, string areaAplicacion, string objetivo, string modalidad, string comentarios, int instructor)
+        public ActionResult CrearCurso(
+            string nombre,
+            int duracion,
+            int calificacion,
+            string tipo,
+            string clasificacion,
+            string areaTematica,
+            string areaAplicacion,
+            string objetivo,
+            string modalidad,
+            string comentarios,
+            int instructor
+        )
         {
             using (AndreTestContext db = new AndreTestContext())
             {
                 Curso cur = new Curso();
-                Instructor inst = new Instructor() { ID_INSTRUCTOR = instructor};
-                db.Instructors.Attach(inst);
                 cur.NOMBRE = nombre;
                 cur.DURACION = duracion;
                 cur.CALIFICACION_MIN = calificacion;
@@ -36,7 +46,7 @@ namespace Rh.Controllers
                 cur.OBJETIVO = objetivo;
                 cur.MODALIDAD = modalidad;
                 cur.COMENTARIOS = comentarios;
-                cur.Instructor = inst;
+                cur.ID_INSTRUCTOR = instructor;
                 db.Cursoes.Add(cur);
                 db.SaveChanges();
                 Cursos = db.Cursoes.OrderBy(x => x.ID_CURSO).ToList();
@@ -77,22 +87,35 @@ namespace Rh.Controllers
         }
 
         [HttpPost]
-        public ActionResult EditarCurso(Curso x, string tipo, string clasificacion, string areaTematica, string areaAplicacion, string objetivo, string modalidad)
+        public ActionResult EditarCurso(
+            int ID_CURSO,
+            string nombre,
+            int duracion,
+            int calificacion,
+            string tipo,
+            string clasificacion,
+            string areaTematica,
+            string areaAplicacion,
+            string objetivo,
+            string modalidad,
+            string comentarios,
+            int instructor
+        )
         {
             using (AndreTestContext db = new AndreTestContext())
             {
-                Curso cur = db.Cursoes.Find(x.ID_CURSO);
-                cur.NOMBRE = x.NOMBRE;
-                cur.DURACION = x.DURACION;
-                cur.CALIFICACION_MIN = x.CALIFICACION_MIN;
+                Curso cur = db.Cursoes.Find(ID_CURSO);
+                cur.NOMBRE = nombre;
+                cur.DURACION = duracion;
+                cur.CALIFICACION_MIN = calificacion;
                 cur.TIPO_CURSO = tipo;
                 cur.CLASIFICACION = clasificacion;
                 cur.AREA_TEMATICA = areaTematica;
                 cur.AREA_APLICACION = areaAplicacion;
                 cur.OBJETIVO = objetivo;
                 cur.MODALIDAD = modalidad;
-                cur.COMENTARIOS = x.COMENTARIOS;
-                cur.Instructor = x.Instructor;
+                cur.COMENTARIOS = comentarios;
+                cur.ID_INSTRUCTOR = instructor;
                 db.SaveChanges();
                 return RedirectToAction("VerCursos");
             }
