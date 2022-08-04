@@ -4,11 +4,16 @@
     ViewBag.Title = "EditarEmpleado";
 }
 
+<h2>EditarEmpleado</h2>
+
 
 @using (Html.BeginForm())
 {
-
-    <div class="form-horizontal" hidden>
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Empleado</h4>
+        <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.ID_EMPLEADO, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -18,7 +23,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.NOMBRE, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NOMBRE, new { htmlAttributes = new { @class = "form-control" } })
@@ -26,7 +31,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.APELLIDO_PATERNO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.APELLIDO_PATERNO, new { htmlAttributes = new { @class = "form-control" } })
@@ -34,7 +39,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.APELLIDO_MATERNO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.APELLIDO_MATERNO, new { htmlAttributes = new { @class = "form-control" } })
@@ -42,7 +47,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.NUM_RELOJ, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NUM_RELOJ, new { htmlAttributes = new { @class = "form-control" } })
@@ -50,7 +55,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.FOTO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.FOTO, new { htmlAttributes = new { @class = "form-control" } })
@@ -58,7 +63,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.FECHA_INGRESO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.FECHA_INGRESO, new { htmlAttributes = new { @class = "form-control" } })
@@ -66,7 +71,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.FECHA_EGRESO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.FECHA_EGRESO, new { htmlAttributes = new { @class = "form-control" } })
@@ -74,7 +79,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.COMPANIA, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.COMPANIA, new { htmlAttributes = new { @class = "form-control" } })
@@ -82,7 +87,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.PLANTA, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.PLANTA, new { htmlAttributes = new { @class = "form-control" } })
@@ -90,7 +95,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.DEPARTAMENTO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DEPARTAMENTO, new { htmlAttributes = new { @class = "form-control" } })
@@ -98,7 +103,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.SUPERVISOR, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.SUPERVISOR, new { htmlAttributes = new { @class = "form-control" } })
@@ -106,7 +111,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.AREA, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.AREA, new { htmlAttributes = new { @class = "form-control" } })
@@ -114,7 +119,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.TIPO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.TIPO, new { htmlAttributes = new { @class = "form-control" } })
@@ -122,7 +127,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.CLASE, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CLASE, new { htmlAttributes = new { @class = "form-control" } })
@@ -130,8 +135,15 @@
             </div>
         </div>
 
+        <div class="form-group">
+            @Html.LabelFor(model => model.PUESTO, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PUESTO, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PUESTO, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.TURNO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.TURNO, new { htmlAttributes = new { @class = "form-control" } })
@@ -139,7 +151,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.HORARIO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.HORARIO, new { htmlAttributes = new { @class = "form-control" } })
@@ -147,7 +159,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.IMSS, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.IMSS, new { htmlAttributes = new { @class = "form-control" } })
@@ -155,7 +167,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.RFC, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.RFC, new { htmlAttributes = new { @class = "form-control" } })
@@ -163,7 +175,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.CURP, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CURP, new { htmlAttributes = new { @class = "form-control" } })
@@ -171,7 +183,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.SEXO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.SEXO, new { htmlAttributes = new { @class = "form-control" } })
@@ -179,7 +191,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.GAFETE, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.GAFETE, new { htmlAttributes = new { @class = "form-control" } })
@@ -187,7 +199,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.FORMA_PAGO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.FORMA_PAGO, new { htmlAttributes = new { @class = "form-control" } })
@@ -195,7 +207,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.BANCO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.BANCO, new { htmlAttributes = new { @class = "form-control" } })
@@ -203,7 +215,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.NUMERO_TARJETA, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NUMERO_TARJETA, new { htmlAttributes = new { @class = "form-control" } })
@@ -211,7 +223,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.SALARIO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.SALARIO, new { htmlAttributes = new { @class = "form-control" } })
@@ -219,7 +231,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.DIRECCION, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DIRECCION, new { htmlAttributes = new { @class = "form-control" } })
@@ -227,7 +239,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.COLONIA, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.COLONIA, new { htmlAttributes = new { @class = "form-control" } })
@@ -235,7 +247,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.NACIONALIDAD, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NACIONALIDAD, new { htmlAttributes = new { @class = "form-control" } })
@@ -243,7 +255,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.ESTADO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ESTADO, new { htmlAttributes = new { @class = "form-control" } })
@@ -251,7 +263,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.MUNICIPIO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.MUNICIPIO, new { htmlAttributes = new { @class = "form-control" } })
@@ -259,7 +271,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.CODIGO_POSTAL, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CODIGO_POSTAL, new { htmlAttributes = new { @class = "form-control" } })
@@ -267,7 +279,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.TELEFONO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.TELEFONO, new { htmlAttributes = new { @class = "form-control" } })
@@ -275,7 +287,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.CEL, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CEL, new { htmlAttributes = new { @class = "form-control" } })
@@ -283,7 +295,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.FECHA_NACIMIENTO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.FECHA_NACIMIENTO, new { htmlAttributes = new { @class = "form-control" } })
@@ -291,7 +303,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.ESTADO_CIVIL, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ESTADO_CIVIL, new { htmlAttributes = new { @class = "form-control" } })
@@ -299,7 +311,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.LOCKER, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.LOCKER, new { htmlAttributes = new { @class = "form-control" } })
@@ -307,7 +319,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.EMERGENCIA_NOMBRE, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.EMERGENCIA_NOMBRE, new { htmlAttributes = new { @class = "form-control" } })
@@ -315,7 +327,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.EMERGENCIA_APELLIDO_PATERNO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.EMERGENCIA_APELLIDO_PATERNO, new { htmlAttributes = new { @class = "form-control" } })
@@ -323,7 +335,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.EMERGENCIA_APELLIDO_MATERNO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.EMERGENCIA_APELLIDO_MATERNO, new { htmlAttributes = new { @class = "form-control" } })
@@ -331,7 +343,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.EMERGENCIA_PARENTEZCO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.EMERGENCIA_PARENTEZCO, new { htmlAttributes = new { @class = "form-control" } })
@@ -339,7 +351,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.EMERGENCIA_TELEFONO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.EMERGENCIA_TELEFONO, new { htmlAttributes = new { @class = "form-control" } })
@@ -347,7 +359,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.EMERGENCIA_DIRECCION, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.EMERGENCIA_DIRECCION, new { htmlAttributes = new { @class = "form-control" } })
@@ -355,7 +367,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.NIVEL_ESCOLAR, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NIVEL_ESCOLAR, new { htmlAttributes = new { @class = "form-control" } })
@@ -363,7 +375,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.NOMBRE_ESCUELA, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NOMBRE_ESCUELA, new { htmlAttributes = new { @class = "form-control" } })
@@ -371,7 +383,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.DIRECCION_ESCUELA, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DIRECCION_ESCUELA, new { htmlAttributes = new { @class = "form-control" } })
@@ -379,7 +391,7 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.EGRESO_ESCUELA, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.EGRESO_ESCUELA, new { htmlAttributes = new { @class = "form-control" } })
@@ -387,531 +399,18 @@
             </div>
         </div>
 
-        <div class="form-group" hidden>
+        <div class="form-group">
             @Html.LabelFor(model => model.ID_CURSO, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.ID_CURSO, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.ID_CURSO, "", new { @class = "text-danger" })
             </div>
         </div>
-    </div>
 
-    <h1>Editar Empleado</h1>
-    <h4 style="color:#0094ff;"><strong>Favor de introducir la información solicitada</strong></h4>
-
-    <hr>
-
-    <h4 style="color:#8fdc6f;"><strong>Datos Personales</strong></h4>
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Nombre">Nombre</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" id="nombre" name="nombre" required="required" type="text" />
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Apellido Paterno">Apellido Paterno</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" id="apellidoPaterno" name="apellidoPaterno" required="required" type="text" />
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Apellido Materno">Apellido Materno</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" id="apellidoMaterno" name="apellidoMaterno" required="required" type="text" />
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="IMSS">IMSS</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" required="required" type="number" id="imss" name="imss" maxlength="11">
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="RFC">RFC</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" required="required" type="text" id="rfc" name="rfc" maxlength="13">
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="CURP">CURP</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" required="required" type="text" id="curp" name="curp" maxlength="18">
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Sexo">Sexo</label>
-        <div class="col-md-9">
-            <select class="form-control" id="sexo" name="sexo" required="required">
-                <option>HOMBRE</option>
-                <option>MUJER</option>
-                <option>INDISTINTO</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Dirección">Dirección</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" required="required" type="text" id="direccion" name="direccion" maxlength="30">
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Colonia">Colonia</label>
-        <div class="col-md-9">
-            <select class="form-control" id="colonia" name="colonia" required="required">
-                <option>10 DE OCTUBRE</option>
-                <option>22 DE FEBRERO</option>
-                <option>ABASOLO</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Código postal">Código postal</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" required="required" type="number" id="cp" name="cp" maxlength="5">
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Nacionalidad">Nacionalidad</label>
-        <div class="col-md-9">
-            <select class="form-control" id="nacionalidad" name="nacionalidad" required="required">
-                <option>MEXICANA</option>
-                <option>AMERICANA</option>
-                <option>OTRO</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Estado">Estado</label>
-        <div class="col-md-9">
-            <select class="form-control" id="estado" name="estado" required="required">
-                <option>AGUASCALIENTES</option>
-                <option>BAJA CALIFORNIA NORTE</option>
-                <option>BAJA CALIFORNIA SUR</option>
-                <option>CAMPECHE</option>
-                <option>CHIAPAS</option>
-                <option>CHIHUAHUA</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Municipio">Municipio</label>
-        <div class="col-md-9">
-            <select class="form-control" id="municipio" name="municipio" required="required">
-                <option>CD JUÁREZ</option>
-                <option>CHIHUAHUA</option>
-                <option>VILLA AHUMADA</option>
-                <option>MADERA</option>
-                <option>PARRAL</option>
-                <option>CASAS GRANDES</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Teléfono">Teléfono</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" required="required" type="number" id="telefono" name="telefono">
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Celular">Celular</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" required="required" type="number" id="cel" name="cel">
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Fecha de nacimiento">Fecha de nacimiento</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" required="required" type="date" id="fechaNacimiento" name="fechaNacimiento" placeholder="dd-mm-yyyy" value="" min="1940-01-01" max="2022-12-31">
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Estado civil">Estado civil</label>
-        <div class="col-md-9">
-            <select class="form-control" id="estadoCivil" name="estadoCivil" required="required">
-                <option>CASADO (A)</option>
-                <option>DIVORCIADO (A)</option>
-                <option>UNION LIBRE</option>
-                <option>SOLTERO (A)</option>
-                <option>VIUDO (A)</option>
-            </select>
-        </div>
-    </div>
-
-    <h4 style="color:#8fdc6f;"><strong>Datos empresariales</strong></h4>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Número de reloj">Número de reloj</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" id="numReloj" name="numReloj" required="required" type="number" />
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Fecha de ingreso">Fecha de ingreso</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" type="date" required="required" id="fechaIngreso" name="fechaIngreso" placeholder="dd-mm-yyyy" value="" min="2010-01-01" max="2050-12-31">
-        </div>
-    </div>
-
-    <div class="form-group row" hidden>
-        <label class="control-label col-md-3" for="Fecha de egreso">Fecha de egreso</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" type="date" id="fechaEgreso" name="fechaEgreso" placeholder="dd-mm-yyyy" value="" min="1997-01-01" max="2030-12-31">
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Compañía">Compañía</label>
-        <div class="col-md-9">
-            <select class="form-control" id="compania" name="compania" required="required">
-                <option>JOHNSON CONTROLS ASC SYSTEMS SAPI DE CV</option>
-                <option>Otro</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Planta">Planta</label>
-        <div class="col-md-9">
-            <select class="form-control" id="planta" name="planta" required="required">
-                <option>CD JUÁREZ</option>
-                <option>Otro</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Departamento">Departamento</label>
-        <div class="col-md-9">
-            <select class="form-control" id="dept" name="dept" required="required">
-                <option>EZ Box</option>
-                <option>STEEL LOUVERS</option>
-                <option>ALUMINIUM LOUVERS</option>
-                <option>MECHANICAL LOUVERS</option>
-                <option>AELS</option>
-                <option>SHEET METAL</option>
-                <option>ANONIZADO</option>
-                <option>EMPAQUE</option>
-                <option>PINTURA</option>
-                <option>PARTS PUNCH SUPPORT</option>
-                <option>SCREEN</option>
-                <option>SUPPORT OFFICES</option>
-                <option>CALIDAD</option>
-                <option>MATERIALES</option>
-                <option>MANTENIMIENTO</option>
-                <option>TOOL ROOM</option>
-                <option>SHIPPING</option>
-                <option>TOOL CRIB</option>
-                <option>ADUANAS</option>
-                <option>RECURSOS HUMANOS</option>
-                <option>AMBIENTAL</option>
-                <option>ENFERMERIA</option>
-                <option>INTENDENCIA</option>
-                <option>INGENIERIA DE MANUFACTURA</option>
-                <option>ADMINISTRATIVO</option>
-                <option>STEEL LOUVERS</option>
-                <option>ALUMINIUM LOUVERS</option>
-                <option>MECHANICAL LOUVERS</option>
-                <option>CREATING AND FINISHING</option>
-                <option>PAINT-SHOP</option>
-                <option>PARTS PUNCH SUPPORT</option>
-                <option>SCREEN</option>
-                <option>SUPPORT OFFICES</option>
-                <option>Otro</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Área">Área</label>
-        <div class="col-md-9">
-            <select class="form-control" id="area" name="area" required="required">
-                <option>ACCESS DOORS</option>
-                <option>ADMINISTRACION</option>
-                <option>ADUANAS</option>
-                <option>AELS</option>
-                <option>ALUMINIUM LOUVERS</option>
-                <option>ANODIZADO</option>
-                <option>BACK DRAFT</option>
-                <option>BOX MACHINE</option>
-                <option>CALIDAD</option>
-                <option>COMPRAS</option>
-                <option>DAMPERS</option>
-                <option>DAMPERS CD36/60 </option>
-                <option>DAMPERS CUADRADOS </option>
-                <option>DAMPERS REDONDOS</option>
-                <option>EHS</option>
-                <option>EMPAQUE</option>
-                <option>Otro</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Supervisor">Supervisor</label>
-        <div class="col-md-9">
-            <select class="form-control" id="supervisor" name="supervisor" required="required">
-                <option>Camacho Dario (Entrenamiento)</option>
-                <option>CARREON PATRICIA (COMPRAS)</option>
-                <option>CASTRO RICARDO  (SHEET METAL)</option>
-                <option>CASTRO RICARDO (ALUMINIUM LOUVERS)</option>
-                <option>CASTRO RICARDO (SCREEN)</option>
-                <option>CENICEROS ROBERTO (FINANZAS)</option>
-                <option>CERVANTES MELISA (AMBIENTAL)</option>
-                <option>CHAVEZ BENNY (CALIDAD)</option>
-                <option>Otro</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Tipo de empleado">Tipo de empleado</label>
-        <div class="col-md-9">
-            <select class="form-control" id="tipoEmpleado" name="tipoEmpleado" required="required">
-                <option>OPERATIVO</option>
-                <option>ADMINISTRATIVO</option>
-                <option>Otro</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Clase">Clase</label>
-        <div class="col-md-9">
-            <select class="form-control" id="clase" name="clase" required="required">
-                <option>DIRECTO</option>
-                <option>INDIRECTO</option>
-                <option>DIRECTO</option>
-                <option>INDIRECTO-ADMINISTRATIVO</option>
-                <option>SALARY</option>
-                <option>INDIRECTO SOP PROD</option>
-                <option>INDIRECTO SOP ADMVO</option>
-                <option>Otro</option>
-            </select>
-        </div>
-    </div>
-    <div class="form-group" hidden>
-        @Html.LabelFor(model => model.PUESTO, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.PUESTO, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.PUESTO, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Puesto">Puesto</label>
-        <div class="col-md-9">
-            <select class="form-control" name="puesto" id="puesto" required="required" >
-                <option>SUPERVISOR DE PRODUCCION</option>
-                <option>TECNICO DE INGENIERIA</option>
-                <option>TECNICO DE INGENIERIA DE KANBAN</option>
-                <option>TECNICO  MECANICO</option>
-                <option>TECNICO DE  TOOL ROOM</option>
-                <option>SUPERVISOR DE TOOL MAKER</option>
-                <option>TECNICO SR. DE  MANTENIMIENTO</option>
-                <option>COORDINADOR DE  CONTABILIDAD</option>
-                <option>COORDINADOR DE CALIDAD</option>
-                <option>GERENTE DE  MATERIALES</option>
-                <option>COORDINADOR DE  RECURSOS HUMANOS</option>
-                <option>INGENIERO DE MANUFACTURA</option>
-                <option>INGENIERO DE PROCESO</option>
-                <option>JEFE DE TALLER</option>
-                <option>PRACTICANTE</option>
-                <option>Otro</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Horario">Horario</label>
-        <div class="col-md-9">
-            <select class="form-control" id="horario" name="horario" required="required">
-                <option>L-V 6:00 a 15:30</option>
-                <option>L-V 7:30 a 17:00</option>
-                <option>L-V 8:30 a 18:00 </option>
-                <option>L-V 7:00 a 16:30</option>
-                <option>L-V 8:00 a 17:30</option>
-                <option>L-V 15:30 a 00:00</option>
-                <option>L-V 13:00 - 21:30</option>
-                <option>L-V 18:00 a 02:30 </option>
-                <option>M-S 0:00 a 06:00 </option>
-                <option>Otro</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Locker">Locker</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" required="required" type="number" id="locker" name="locker">
-        </div>
-    </div>
-
-    <h4 style="color:#8fdc6f;"><strong>Datos Bancarios</strong></h4>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Forma de pago">Forma de pago</label>
-        <div class="col-md-9">
-            <select class="form-control" id="pago" name="pago" required="required">
-                <option>DEPOSITO</option>
-                <option>CHEQUE</option>
-                <option>EFECTIVO</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Banco">Banco</label>
-        <div class="col-md-9">
-            <select class="form-control" id="banco" name="banco" required="required">
-                <option>BANORTE</option>
-                <option>BBVA BANCOMER</option>
-                <option>Otro</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Número de la tarjeta">Número de la tarjeta</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" type="number" id="numTarjeta" name="numTarjeta">
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Salario">Salario</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" required="required" type="number" id="salario" name="salario">
-        </div>
-    </div>
-
-    <h4 style="color:#8fdc6f;"><strong>Datos académicos</strong></h4>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Escolaridad">Escolaridad</label>
-        <div class="col-md-9">
-            <select class="form-control" id="nivelEscolar" name="nivelEscolar" required="required">
-                <option>NINGUNO</option>
-                <option>PRIMARIA</option>
-                <option>SECUNDARIA</option>
-                <option>PREPARATORIA</option>
-                <option>UNIVERISIDAD</option>
-                <option>MAESTRIA</option>
-                <option>DOCTORADO</option>
-                <option>Otro</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Nombre">Nombre</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" required="required" type="text" id="nombreEscuela" name="nombreEscuela">
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Dirección">Dirección</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" required="required" type="text" id="direccionEscuela" name="direccionEscuela">
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Fecha de ingreso">Fecha de egreso</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" required="required" type="date" id="egresoEscuela" name="egresoEscuela" placeholder="dd-mm-yyyy" value="" min="1950-01-01" max="2030-12-31">
-        </div>
-    </div>
-
-    <h4 style="color:#8fdc6f;"><strong>Contacto de emergencia</strong></h4>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Nombre">Nombre</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" required="required" type="text" id="emerNombre" name="emerNombre">
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Apellido paterno">Apellido paterno</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" required="required" type="text" id="emerApellidoPaterno" name="emerApellidoPaterno">
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Apellido materno">Apellido materno</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" required="required" type="text" id="emerApellidoMaterno" name="emerApellidoMaterno">
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Parentezco">Parentezco</label>
-        <div class="col-md-9">
-            <select class="form-control" id="emerParentezco" name="emerParentezco" required="required">
-                <option>MAMÁ</option>
-                <option>PAPÁ</option>
-                <option>ESPOSO(A)</option>
-                <option>HIJO(A)</option>
-                <option>TIO(A)</option>
-                <option>ABUELO(A)</option>
-                <option>PRIMO(A)</option>
-                <option>Otro</option>
-            </select>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Teléfono">Teléfono</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" required="required" type="tel" id="emerTelefono" name="emerTelefono">
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Dirección">Dirección</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" required="required" type="text" id="emerDireccion" name="emerDireccion" maxlength="30">
-        </div>
-    </div>
-
-    <h4 style="color:#8fdc6f;"><strong>Fotografía</strong></h4>
-
-    <div class="form-group row">
-        <label class="control-label col-md-3" for="Fotografía">Foto</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" type="file" onchange="imagenAbase64(this)" accept="image/png, image/jpeg, image/jpg" />
-        </div>
-    </div>
-
-    <div class="form-group row" hidden>
-        <label class="control-label col-md-3" for="Fotografía">Fotografía</label>
-        <div class="col-md-9">
-            <input class="form-control text-box single-line" id="fotografia" type="text" name="fotografia" />
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Guardar" class="btn btn-success">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
         </div>
     </div>
 }
@@ -920,154 +419,6 @@
     @Html.ActionLink("Back to List", "Index")
 </div>
 
-<script type="text/javascript">
-    let imagenbase64 = "";
-    let foto = document.getElementById("fotografia");
-
-    function imagenAbase64(element) {
-        var file = element.files[0];
-        var reader = new FileReader();
-        reader.onloadend = function () {
-            imagebase64 = reader.result;
-            foto.value = imagebase64;
-        }
-        reader.readAsDataURL(file);
-    }
-
-    let NOMBRE = document.getElementById("NOMBRE").value;
-    let APELLIDO_PATERNO = document.getElementById("APELLIDO_PATERNO").value;
-    let APELLIDO_MATERNO = document.getElementById("APELLIDO_MATERNO").value;
-    let NUM_RELOJ = document.getElementById("NUM_RELOJ").value;
-    let FOTO = document.getElementById("FOTO").value;
-    let FECHA_INGRESO = document.getElementById("FECHA_INGRESO").value;
-    let FECHA_EGRESO = document.getElementById("FECHA_EGRESO").value;
-    let COMPANIA = document.getElementById("COMPANIA").value;
-    let PLANTA = document.getElementById("PLANTA").value;
-    let DEPARTAMENTO = document.getElementById("DEPARTAMENTO").value;
-    let SUPERVISOR = document.getElementById("SUPERVISOR").value;
-    let AREA = document.getElementById("AREA").value;
-    let TIPO = document.getElementById("TIPO").value;
-    let CLASE = document.getElementById("CLASE").value;
-    let PUESTO = document.getElementById("PUESTO").value;
-    let TURNO = document.getElementById("TURNO").value;
-    let HORARIO = document.getElementById("HORARIO").value;
-    let IMSS = document.getElementById("IMSS").value;
-    let RFC = document.getElementById("RFC").value;
-    let CURP = document.getElementById("CURP").value;
-    let SEXO = document.getElementById("SEXO").value;
-    let GAFETE = document.getElementById("GAFETE").value;
-    let FORMA_PAGO = document.getElementById("FORMA_PAGO").value;
-    let BANCO = document.getElementById("BANCO").value;
-    let NUMERO_TARJETA = document.getElementById("NUMERO_TARJETA").value;
-    let SALARIO = document.getElementById("SALARIO").value;
-    let DIRECCION = document.getElementById("DIRECCION").value;
-    let COLONIA = document.getElementById("COLONIA").value;
-    let NACIONALIDAD = document.getElementById("NACIONALIDAD").value;
-    let ESTADO = document.getElementById("ESTADO").value;
-    let MUNICIPIO = document.getElementById("MUNICIPIO").value;
-    let CODIGO_POSTAL = document.getElementById("CODIGO_POSTAL").value;
-    let TELEFONO = document.getElementById("TELEFONO").value;
-    let CEL = document.getElementById("CEL").value;
-    let FECHA_NACIMIENTO = document.getElementById("FECHA_NACIMIENTO").value;
-    let ESTADO_CIVIL = document.getElementById("ESTADO_CIVIL").value;
-    let LOCKER = document.getElementById("LOCKER").value;
-    let EMERGENCIA_NOMBRE = document.getElementById("EMERGENCIA_NOMBRE").value;
-    let EMERGENCIA_APELLIDO_PATERNO = document.getElementById("EMERGENCIA_APELLIDO_PATERNO").value;
-    let EMERGENCIA_APELLIDO_MATERNO = document.getElementById("EMERGENCIA_APELLIDO_MATERNO").value;
-    let EMERGENCIA_PARENTEZCO = document.getElementById("EMERGENCIA_PARENTEZCO").value;
-    let EMERGENCIA_TELEFONO = document.getElementById("EMERGENCIA_TELEFONO").value;
-    let EMERGENCIA_DIRECCION = document.getElementById("EMERGENCIA_DIRECCION").value;
-    let NIVEL_ESCOLAR = document.getElementById("NIVEL_ESCOLAR").value;
-    let NOMBRE_ESCUELA = document.getElementById("NOMBRE_ESCUELA").value;
-    let DIRECCION_ESCUELA = document.getElementById("DIRECCION_ESCUELA").value;
-    let EGRESO_ESCUELA = document.getElementById("EGRESO_ESCUELA").value;
-    let ID_CURSO = document.getElementById("ID_CURSO").value;
-
-    let nombre = document.getElementById("nombre");
-    let apellidoPaterno = document.getElementById("apellidoPaterno");
-    let apellidoMaterno = document.getElementById("apellidoMaterno");
-    let imss = document.getElementById("imss");
-    let rfc = document.getElementById("rfc");
-    let curp = document.getElementById("curp");
-    let direccion = document.getElementById("direccion");
-    let cp = document.getElementById("cp");
-    let nacionalidad = document.getElementById("nacionalidad");
-    let estado = document.getElementById("estado");
-    let municipio = document.getElementById("municipio");
-    let telefono = document.getElementById("telefono");
-    let cel = document.getElementById("cel");
-    let fechaNacimiento = document.getElementById("fechaNacimiento");
-    let estadoCivil = document.getElementById("estadoCivil");
-    let numReloj = document.getElementById("numReloj");
-    let fechaIngreso = document.getElementById("fechaIngreso");
-    let fechaEgreso = document.getElementById("fechaEgreso");
-    let compania = document.getElementById("compania");
-    let planta = document.getElementById("planta");
-    let dept = document.getElementById("dept");
-    let area = document.getElementById("area");
-    let supervisor = document.getElementById("supervisor");
-    let tipoEmpleado = document.getElementById("tipoEmpleado");
-    let clase = document.getElementById("clase");
-    let horario = document.getElementById("horario");
-    let locker = document.getElementById("locker");
-    let pago = document.getElementById("pago");
-    let banco = document.getElementById("banco");
-    let numTarjeta = document.getElementById("numTarjeta");
-    let salario = document.getElementById("salario");
-    let nivelEscolar = document.getElementById("nivelEscolar");
-    let nombreEscuela = document.getElementById("nombreEscuela");
-    let direccionEscuela = document.getElementById("direccionEscuela");
-    let egresoEscuela = document.getElementById("egresoEscuela");
-    let emerNombre = document.getElementById("emerNombre");
-    let emerApellidoPaterno = document.getElementById("emerApellidoPaterno");
-    let emerApellidoMaterno = document.getElementById("emerApellidoMaterno");
-    let emerParentezco = document.getElementById("emerParentezco");
-    let emerTelefono = document.getElementById("emerTelefono");
-    let emerDireccion = document.getElementById("emerDireccion");
-    let fotografia = document.getElementById("fotografia");
-    let puesto = document.getElementById("puesto");
-
-    puesto.value = PUESTO;
-    nombre.value = NOMBRE;
-    apellidoPaterno.value = APELLIDO_PATERNO
-    apellidoMaterno.value = APELLIDO_MATERNO;
-    imss.value = IMSS;
-    rfc.value = RFC;
-    curp.value = CURP;
-    direccion.value = DIRECCION;
-    cp.value = CODIGO_POSTAL
-    nacionalidad.value = NACIONALIDAD;
-    estado.value = ESTADO;
-    municipio.value = MUNICIPIO;
-    telefono.value = TELEFONO;
-    cel.value = CEL;
-    fechaNacimiento.value = FECHA_NACIMIENTO;
-    estadoCivil.value = ESTADO_CIVIL;
-    numReloj.value = NUM_RELOJ;
-    fechaIngreso.value = FECHA_INGRESO;
-    fechaEgreso.value = EGRESO_ESCUELA;
-    compania.value = COMPANIA;
-    planta.value = PLANTA;
-    dept.value = DEPARTAMENTO;
-    area.value = AREA;
-    supervisor.value = SUPERVISOR;
-    tipoEmpleado.value = TIPO;
-    clase.value = CLASE;
-    horario.value = HORARIO;
-    locker.value = LOCKER;
-    pago.value = FORMA_PAGO;
-    banco.value = BANCO;
-    numTarjeta.value = NUMERO_TARJETA;
-    salario.value = SALARIO;
-    nivelEscolar.value = NIVEL_ESCOLAR;
-    nombreEscuela.value = NOMBRE_ESCUELA;
-    direccionEscuela.value = DIRECCION_ESCUELA;
-    egresoEscuela.value = EGRESO_ESCUELA;
-    emerNombre.value = EMERGENCIA_NOMBRE;
-    emerApellidoPaterno.value = EMERGENCIA_APELLIDO_PATERNO
-    emerApellidoMaterno.value = EMERGENCIA_APELLIDO_MATERNO;
-    emerParentezco.value = EMERGENCIA_PARENTEZCO;
-    emerTelefono.value = EMERGENCIA_TELEFONO;
-    emerDireccion.value = EMERGENCIA_DIRECCION;
-    fotografia.value = FOTO;
-</script>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
