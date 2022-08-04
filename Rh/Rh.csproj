@@ -250,6 +250,7 @@
     <Content Include="Views\Curso\EditarCurso.cshtml" />
     <Content Include="Views\Empleado\CrearEmpleado.cshtml" />
     <Content Include="Views\Empleado\VerEmpleados.cshtml" />
+    <Content Include="Views\Empleado\EditarEmpleado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
