@@ -217,6 +217,7 @@
     <Content Include="Models\ModelRh.edmx.diagram">
       <DependentUpon>ModelRh.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -251,6 +252,7 @@
     <Content Include="Views\Empleado\CrearEmpleado.cshtml" />
     <Content Include="Views\Empleado\VerEmpleados.cshtml" />
     <Content Include="Views\Empleado\EditarEmpleado.cshtml" />
+    <Content Include="Views\Empleado\AgregarExcel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
