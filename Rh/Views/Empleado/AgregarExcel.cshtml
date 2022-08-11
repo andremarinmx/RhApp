@@ -1,0 +1,88 @@
+﻿<h1>Subir excel</h1>
+<h1></h1>
+<input class="form-control text-box single-line" type="file" id="input" accept=".xls,.xlsx">
+<h1></h1>
+<button class="btn btn-primary" id="button">Convert</button>
+
+<script type="text/javascript">
+
+    let selectedFile;
+    console.log(window.XLSX);
+    document.getElementById('input').addEventListener("change", (event) => {
+        selectedFile = event.target.files[0];
+    })
+
+    let data = [{
+        "ID_EMPLEADO": "",
+        "NOMBRE": "",
+        "APELLIDO_PATERNO": "",
+        "APELLIDO_MATERNO": "",
+        "NUM_RELOJ": "",
+        "FOTO": "",
+        "FECHA_INGRESO": "",
+        "COMPANIA": "",
+        "PLANTA": "",
+        "DEPARTAMENTO": "",
+        "SUPERVISOR": "",
+        "AREA": "",
+        "TIPO": "",
+        "CLASE": "",
+        "PUESTO": "",
+        "HORARIO": "",
+        "IMMS": "",
+        "RFC": "",
+        "CURP": "",
+        "SEXO": "",
+        "FORMA_PAGO": "",
+        "BANCO": "",
+        "NUMERO_TARJETA": "",
+        "SALARIO": "",
+        "DIRECCION": "",
+        "COLONIA": "",
+        "NACIONALIDAD": "",
+        "ESTADO": "",
+        "MUNICIPIO": "",
+        "CODIGO_POSTAL": "",
+        "TELEFONO": "",
+        "CEL": "",
+        "FECHA_NACIMIENTO": "",
+        "ESTADO_CIVIL": "",
+        "LOCKER": "",
+        "EMERGENCIA_NOMBRE": "",
+        "EMERGENCIA_APELLIDO_PATERNO": "",
+        "EMERGENCIA_APELLIDO_MATERNO": "",
+        "EMERGENCIA_PARENTEZCO": "",
+        "EMERGENCIA_DIRECCION": "",
+        "EMERGENCIA_TELEFONO": "",
+        "NIVEL_ESCOLAR": "",
+        "NOMBRE_ESCUELA": "",
+        "DIRECCION_ESCUELA": "",
+        "EGRESO_ESCUELA": ""
+    }]
+
+
+    document.getElementById('button').addEventListener("click", () => {
+        XLSX.utils.json_to_sheet(data, 'out.xlsx');
+        if (selectedFile) {
+            let fileReader = new FileReader();
+            fileReader.readAsBinaryString(selectedFile);
+            fileReader.onload = (event) => {
+                let data = event.target.result;
+                let workbook = XLSX.read(data, { type: "binary" });
+                console.log(workbook);
+                workbook.SheetNames.forEach(sheet => {
+                    let dato = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]);
+                    console.log(dato);
+                    $.ajax({
+                        type: 'POST',
+                        traditional: true,
+                        url: '@Url.Action("AgregarExcel", "Empleado")',
+                        data: JSON.stringify(dato),
+                        contentType: 'application/json'
+                    });
+                });
+            }
+        }
+    });
+
+</script>
