@@ -251,5 +251,73 @@ namespace Rh.Controllers
                 return RedirectToAction("VerEmpleados");
             }
         }
+
+        [HttpGet]
+        public ActionResult AgregarExcel()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AgregarExcel(IEnumerable<Empleados> data)
+        {
+            using (AndreTestContext db = new AndreTestContext())
+            {
+                return View();
+            }
+        }
+    }
+
+    public class Empleados
+    {
+        public long ID_EMPLEADO { get; set; }
+        public string NOMBRE { get; set; }
+        public string APELLIDO_PATERNO { get; set; }
+        public string APELLIDO_MATERNO { get; set; }
+        public long NUM_RELOJ { get; set; }
+        public string FOTO { get; set; }
+        public string FECHA_INGRESO { get; set; }
+        public string FECHA_EGRESO { get; set; }
+        public string COMPANIA { get; set; }
+        public string PLANTA { get; set; }
+        public string DEPARTAMENTO { get; set; }
+        public string SUPERVISOR { get; set; }
+        public string AREA { get; set; }
+        public string TIPO { get; set; }
+        public string CLASE { get; set; }
+        public string PUESTO { get; set; }
+        public string TURNO { get; set; }
+        public string HORARIO { get; set; }
+        public long IMSS { get; set; }
+        public string RFC { get; set; }
+        public string CURP { get; set; }
+        public string SEXO { get; set; }
+        public string GAFETE { get; set; }
+        public string FORMA_PAGO { get; set; }
+        public string BANCO { get; set; }
+        public long NUMERO_TARJETA { get; set; }
+        public long SALARIO { get; set; }
+        public string DIRECCION { get; set; }
+        public string COLONIA { get; set; }
+        public string NACIONALIDAD { get; set; }
+        public string ESTADO { get; set; }
+        public string MUNICIPIO { get; set; }
+        public long CODIGO_POSTAL { get; set; }
+        public long TELEFONO { get; set; }
+        public long CEL { get; set; }
+        public string FECHA_NACIMIENTO { get; set; }
+        public string ESTADO_CIVIL { get; set; }
+        public string LOCKER { get; set; }
+        public string EMERGENCIA_NOMBRE { get; set; }
+        public string EMERGENCIA_APELLIDO_PATERNO { get; set; }
+        public string EMERGENCIA_APELLIDO_MATERNO { get; set; }
+        public string EMERGENCIA_PARENTEZCO { get; set; }
+        public long EMERGENCIA_TELEFONO { get; set; }
+        public string EMERGENCIA_DIRECCION { get; set; }
+        public string NIVEL_ESCOLAR { get; set; }
+        public string NOMBRE_ESCUELA { get; set; }
+        public string DIRECCION_ESCUELA { get; set; }
+        public string EGRESO_ESCUELA { get; set; }
+        public long ID_CURSO { get; set; }
     }
 }
