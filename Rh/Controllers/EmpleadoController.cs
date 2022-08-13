@@ -263,7 +263,64 @@ namespace Rh.Controllers
         {
             using (AndreTestContext db = new AndreTestContext())
             {
-                return View();
+                foreach (var item in data)
+                {
+                    if(item.NOMBRE == null)
+                    {
+                        //Saltar elementos ingresados auntomáticamente en excel
+                    }
+                    else
+                    {
+                        Empleado emp = new Empleado();
+                        emp.NOMBRE = item.NOMBRE;
+                        emp.APELLIDO_PATERNO = item.APELLIDO_PATERNO;
+                        emp.APELLIDO_MATERNO = item.APELLIDO_MATERNO;
+                        emp.IMSS = item.IMSS;
+                        emp.RFC = item.RFC;
+                        emp.CURP = item.CURP;
+                        emp.SEXO = item.SEXO;
+                        emp.DIRECCION = item.DIRECCION;
+                        emp.COLONIA = item.COLONIA;
+                        emp.CODIGO_POSTAL = item.CODIGO_POSTAL;
+                        emp.ESTADO = item.ESTADO;
+                        emp.NACIONALIDAD = item.NACIONALIDAD;
+                        emp.MUNICIPIO = item.MUNICIPIO;
+                        emp.TELEFONO = item.TELEFONO;
+                        emp.CEL = item.CEL;
+                        emp.FECHA_NACIMIENTO = item.FECHA_NACIMIENTO;
+                        emp.ESTADO_CIVIL = item.ESTADO_CIVIL;
+                        emp.NUM_RELOJ = item.NUM_RELOJ;
+                        emp.FECHA_INGRESO = item.FECHA_INGRESO;
+                        emp.COMPANIA = item.COMPANIA;
+                        emp.PLANTA = item.PLANTA;
+                        emp.DEPARTAMENTO = item.DEPARTAMENTO;
+                        emp.AREA = item.AREA;
+                        emp.SUPERVISOR = item.SUPERVISOR;
+                        emp.TIPO = item.TIPO;
+                        emp.CLASE = item.CLASE;
+                        emp.PUESTO = item.PUESTO;
+                        emp.HORARIO = item.HORARIO;
+                        emp.LOCKER = item.LOCKER;
+                        emp.FORMA_PAGO = item.FORMA_PAGO;
+                        emp.BANCO = item.BANCO;
+                        emp.NUMERO_TARJETA = item.NUMERO_TARJETA;
+                        emp.SALARIO = item.SALARIO;
+                        emp.NIVEL_ESCOLAR = item.NIVEL_ESCOLAR;
+                        emp.NOMBRE_ESCUELA = item.NOMBRE_ESCUELA;
+                        emp.DIRECCION_ESCUELA = item.DIRECCION_ESCUELA;
+                        emp.EGRESO_ESCUELA = item.EGRESO_ESCUELA;
+                        emp.EMERGENCIA_NOMBRE = item.EMERGENCIA_NOMBRE;
+                        emp.EMERGENCIA_APELLIDO_PATERNO = item.EMERGENCIA_APELLIDO_PATERNO;
+                        emp.EMERGENCIA_APELLIDO_MATERNO = item.EMERGENCIA_APELLIDO_MATERNO;
+                        emp.EMERGENCIA_PARENTEZCO = item.EMERGENCIA_PARENTEZCO;
+                        emp.EMERGENCIA_TELEFONO = item.EMERGENCIA_TELEFONO;
+                        emp.EMERGENCIA_DIRECCION = item.EMERGENCIA_DIRECCION;
+                        emp.FOTO = item.FOTO;
+                        db.Empleadoes.Add(emp);
+                        db.SaveChanges();
+                    }
+                }
+                    return View();
             }
         }
     }
