@@ -265,11 +265,9 @@ namespace Rh.Controllers
             {
                 foreach (var item in data)
                 {
-                    if(item.NOMBRE == null)
-                    {
-                        //Saltar elementos ingresados auntomáticamente en excel
-                    }
-                    else
+                    long num_reloj = item.NUM_RELOJ;
+                    var existe = db.Empleadoes.Where(x => x.NUM_RELOJ == num_reloj).Count();
+                    if (item.NOMBRE != null && existe == 0)
                     {
                         Empleado emp = new Empleado();
                         emp.NOMBRE = item.NOMBRE;
