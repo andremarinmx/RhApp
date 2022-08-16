@@ -253,6 +253,8 @@
     <Content Include="Views\Empleado\VerEmpleados.cshtml" />
     <Content Include="Views\Empleado\EditarEmpleado.cshtml" />
     <Content Include="Views\Empleado\AgregarExcel.cshtml" />
+    <Content Include="Views\Empleado\BuscarEmpleado.cshtml" />
+    <Content Include="Views\Empleado\VerEmpleado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

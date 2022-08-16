@@ -321,6 +321,22 @@ namespace Rh.Controllers
                     return View();
             }
         }
+
+        [HttpGet]
+        public ActionResult BuscarEmpleado()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult VerEmpleado(int numReloj)
+        {
+            using (AndreTestContext db = new AndreTestContext())
+            {
+                var empleado = db.Empleadoes.Where(x => x.NUM_RELOJ == numReloj).ToList();
+                return View(empleado);
+            }
+        }
     }
 
     public class Empleados
