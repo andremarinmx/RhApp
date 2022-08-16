@@ -1,0 +1,343 @@
+﻿@model IEnumerable<Rh.Models.Empleado>
+
+@{
+    ViewBag.Title = "VerEmpleado";
+}
+<h1></h1>
+<h1></h1>
+@foreach (var item in Model)
+{
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Foto"></label>
+        <div class="col-md-9">
+            <a target="_blank" href="@Html.DisplayFor(modelItem => item.FOTO)">
+                <img src="@Html.DisplayFor(modelItem => item.FOTO)" height="230px" width="280px" style="border-radius:6px;" />
+            </a>
+        </div>
+    </div>
+
+    <h4 style="color:#8fdc6f;"><strong>Datos Personales</strong></h4>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Nombre">Nombre</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.NOMBRE)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Apellido Paterno">Apellido Paterno</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.APELLIDO_PATERNO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Apellido Materno">Apellido Materno</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.APELLIDO_MATERNO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="IMSS">IMSS</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.IMSS)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="RFC">RFC</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.RFC)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="CURP">CURP</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.CURP)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Sexo">Sexo</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.SEXO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Dirección">Dirección</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.DIRECCION)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Colonia">Colonia</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.COLONIA)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Código postal">Código postal</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.CODIGO_POSTAL)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Nacionalidad">Nacionalidad</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.NACIONALIDAD)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Estado">Estado</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.ESTADO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Municipio">Municipio</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.MUNICIPIO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Teléfono">Teléfono</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.TELEFONO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Celular">Celular</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.CEL)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Fecha de nacimiento">Fecha de nacimiento</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.FECHA_NACIMIENTO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Estado civil">Estado civil</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.ESTADO_CIVIL)
+        </div>
+    </div>
+
+    <h4 style="color:#8fdc6f;"><strong>Datos empresariales</strong></h4>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Número de reloj">Número de reloj</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.NUM_RELOJ)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Fecha de ingreso">Fecha de ingreso</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.FECHA_INGRESO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Fecha de egreso">Fecha de egreso</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.FECHA_EGRESO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Compañía">Compañía</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.COMPANIA)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Planta">Planta</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.PLANTA)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Departamento">Departamento</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.DEPARTAMENTO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Área">Área</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.AREA)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Supervisor">Supervisor</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.SUPERVISOR)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Tipo de empleado">Tipo de empleado</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.TIPO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Clase">Clase</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.CLASE)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Puesto">Puesto</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.PUESTO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Horario">Horario</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.HORARIO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Locker">Locker</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.LOCKER)
+        </div>
+    </div>
+
+    <h4 style="color:#8fdc6f;"><strong>Datos Bancarios</strong></h4>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Forma de pago">Forma de pago</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.FORMA_PAGO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Banco">Banco</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.BANCO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Número de la tarjeta">Número de la tarjeta</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.NUMERO_TARJETA)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Salario">Salario</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.SALARIO)
+        </div>
+    </div>
+
+    <h4 style="color:#8fdc6f;"><strong>Datos académicos</strong></h4>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Escolaridad">Escolaridad</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.NIVEL_ESCOLAR)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Nombre">Nombre</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.NOMBRE_ESCUELA)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Dirección">Dirección</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.DIRECCION_ESCUELA)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Fecha de ingreso">Fecha de egreso</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.EGRESO_ESCUELA)
+        </div>
+    </div>
+
+    <h4 style="color:#8fdc6f;"><strong>Contacto de emergencia</strong></h4>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Nombre">Nombre</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.EMERGENCIA_NOMBRE)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Apellido paterno">Apellido paterno</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.EMERGENCIA_APELLIDO_PATERNO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Apellido materno">Apellido materno</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.EMERGENCIA_APELLIDO_MATERNO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Parentezco">Parentezco</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.EMERGENCIA_PARENTEZCO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Teléfono">Teléfono</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.TELEFONO)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="control-label col-md-3" for="Dirección">Dirección</label>
+        <div class="col-md-9">
+            @Html.DisplayFor(modelItem => item.EMERGENCIA_DIRECCION)
+        </div>
+    </div>
+
+    <td>
+        <h5 style="color:#0094ff;">
+            <h3> @Html.ActionLink("Editar", "EditarEmpleado", new { id = item.ID_EMPLEADO })</h3>
+            <h3>@Html.ActionLink("Eliminar", "EliminarEmpleado", new { id = item.ID_EMPLEADO })</h3>
+        </h5>
+    </td>
+}

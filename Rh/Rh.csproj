@@ -250,11 +250,13 @@
     <Content Include="Views\Curso\VerCursos.cshtml" />
     <Content Include="Views\Curso\EditarCurso.cshtml" />
     <Content Include="Views\Empleado\CrearEmpleado.cshtml" />
-    <Content Include="Views\Empleado\VerEmpleados.cshtml" />
+    <Content Include="Views\Empleado\VerEmpleadosMax.cshtml" />
     <Content Include="Views\Empleado\EditarEmpleado.cshtml" />
     <Content Include="Views\Empleado\AgregarExcel.cshtml" />
     <Content Include="Views\Empleado\BuscarEmpleado.cshtml" />
     <Content Include="Views\Empleado\VerEmpleado.cshtml" />
+    <Content Include="Views\Empleado\VerEmpleadosMin.cshtml" />
+    <Content Include="Views\Empleado\DetalleEmpleado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

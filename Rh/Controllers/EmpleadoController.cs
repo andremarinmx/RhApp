@@ -120,7 +120,17 @@ namespace Rh.Controllers
         }
 
         [HttpGet]
-        public ActionResult VerEmpleados()
+        public ActionResult VerEmpleadosMax()
+        {
+            using (AndreTestContext db = new AndreTestContext())
+            {
+                Empleado = db.Empleadoes.OrderBy(x => x.ID_EMPLEADO).ToList();
+                return View(Empleado);
+            }
+        }
+
+        [HttpGet]
+        public ActionResult VerEmpleadosMin()
         {
             using (AndreTestContext db = new AndreTestContext())
             {
@@ -330,6 +340,16 @@ namespace Rh.Controllers
 
         [HttpPost]
         public ActionResult VerEmpleado(int numReloj)
+        {
+            using (AndreTestContext db = new AndreTestContext())
+            {
+                var empleado = db.Empleadoes.Where(x => x.NUM_RELOJ == numReloj).ToList();
+                return View(empleado);
+            }
+        }
+
+        [HttpGet]
+        public ActionResult DetalleEmpleado(int numReloj)
         {
             using (AndreTestContext db = new AndreTestContext())
             {
