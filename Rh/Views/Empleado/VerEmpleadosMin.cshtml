@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Rh.Models.Empleado>
+
+@{
+    ViewBag.Title = "VerEmpleados";
+}
+
+<h2>Empleados</h2>
+
+<h4 style="color:#0094ff;">
+    <strong> @Html.ActionLink("Crear", "CrearEmpleado")</strong>
+</h4>
+<h4 style="color:#0094ff;">
+    <strong> @Html.ActionLink("Ver completo", "VerEmpleadosMax")</strong>
+</h4>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </th>
+        <th>
+            <!-- @Html.DisplayNameFor(model => model.APELLIDO_PATERNO)  -->
+            APELLIDO PATERNO
+        </th>
+        <th>
+            <!-- @Html.DisplayNameFor(model => model.NUM_RELOJ)  -->
+            NÚMERO RELOJ
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEPARTAMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUPERVISOR)
+        </th>
+        <th>
+            <!-- @Html.DisplayNameFor(model => model.AREA) -->
+            ÁREA
+        <th>
+            @Html.DisplayNameFor(model => model.PUESTO)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOMBRE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.APELLIDO_PATERNO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NUM_RELOJ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEPARTAMENTO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SUPERVISOR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AREA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PUESTO)
+            </td>
+            <td>
+                <h5 style="color:#0094ff;">
+                    @Html.ActionLink("Editar", "EditarEmpleado", new { id = item.ID_EMPLEADO })
+                    @Html.ActionLink("Eliminar", "EliminarEmpleado", new { id = item.ID_EMPLEADO })
+                    @Html.ActionLink("Detalle", "DetalleEmpleado", new { numReloj = item.NUM_RELOJ })
+                </h5>
+            </td>
+        </tr>
+    }
+
+</table>

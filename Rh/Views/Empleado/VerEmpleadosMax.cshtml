@@ -9,6 +9,9 @@
 <h4 style="color:#0094ff;">
     <strong> @Html.ActionLink("Crear", "CrearEmpleado")</strong>
 </h4>
+<h4 style="color:#0094ff;">
+    <strong> @Html.ActionLink("Ver parcial", "VerEmpleadosMin")</strong>
+</h4>
 <table class="table">
     <tr>
         <th hidden>
@@ -364,6 +367,7 @@
             <h5 style="color:#0094ff;">
                 @Html.ActionLink("Editar", "EditarEmpleado", new { id = item.ID_EMPLEADO })
                 @Html.ActionLink("Eliminar", "EliminarEmpleado", new { id = item.ID_EMPLEADO })
+                @Html.ActionLink("Detalle", "DetalleEmpleado", new { numReloj = item.NUM_RELOJ })
             </h5>
         </td>
     </tr>
