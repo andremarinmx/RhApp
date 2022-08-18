@@ -9,7 +9,6 @@ namespace Rh.Controllers
 {
     public class EmpleadoCursoController : Controller
     {
-        List<Empleado> empleado;
         [HttpGet]
         public ActionResult AsignarCursos()
         {
@@ -25,18 +24,31 @@ namespace Rh.Controllers
             using (AndreTestContext db = new AndreTestContext())
             {
                 Empleado_Curso empCur = new Empleado_Curso();
-                Empleado emp = new Empleado();
 
-                empleado = db.Empleadoes.Where(x => x.NUM_RELOJ == numReloj).ToList();
-
-                foreach (var item in empleado)
-                {
-                    empCur.ID_CURSO = idCurso;
-                    empCur.ID_EMPLEADO = item.ID_EMPLEADO;
-                }
+                var empleado = db.Empleadoes.Where(x => x.NUM_RELOJ == numReloj).ToList();
+                empCur.ID_CURSO = idCurso;
+                empCur.ID_EMPLEADO = empleado[0].ID_EMPLEADO;
                 db.Empleado_Curso.Add(empCur);
                 db.SaveChanges();
                 return View();
+            }
+        }
+
+        [HttpGet]
+        public ActionResult BuscarCursosEmpleado()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult VerCursosEmpleado(int numReloj)
+        {
+            using (AndreTestContext db = new AndreTestContext())
+            {
+                var empleado = db.Empleadoes.Where(x => x.NUM_RELOJ == numReloj).ToList();
+                long idEmpleado = empleado[0].ID_EMPLEADO;
+                var empleado_curso = db.Empleado_Curso.Where(x => x.ID_EMPLEADO == idEmpleado).ToList();
+                return View(empleado_curso);
             }
         }
     }

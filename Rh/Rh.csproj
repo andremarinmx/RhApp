@@ -262,6 +262,8 @@
     <Content Include="Views\Empleado\VerEmpleadosMin.cshtml" />
     <Content Include="Views\Empleado\DetalleEmpleado.cshtml" />
     <Content Include="Views\EmpleadoCurso\AsignarCursos.cshtml" />
+    <Content Include="Views\EmpleadoCurso\BuscarCursosEmpleado.cshtml" />
+    <Content Include="Views\EmpleadoCurso\VerCursosEmpleado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
