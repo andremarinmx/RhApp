@@ -51,5 +51,17 @@ namespace Rh.Controllers
                 return View(empleado_curso);
             }
         }
+
+        [HttpGet]
+        public ActionResult EliminarCursoEmpleado(int id)
+        {
+            using (AndreTestContext db = new AndreTestContext())
+            {
+                Empleado_Curso empCur = db.Empleado_Curso.Find(id);
+                db.Empleado_Curso.Remove(empCur);
+                db.SaveChanges();
+                return RedirectToAction("BuscarCursosEmpleado");
+            }
+        }
     }
 }

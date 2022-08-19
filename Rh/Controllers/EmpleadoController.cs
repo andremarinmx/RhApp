@@ -147,7 +147,7 @@ namespace Rh.Controllers
                 Empleado emp = db.Empleadoes.Find(id);
                 db.Empleadoes.Remove(emp);
                 db.SaveChanges();
-                return RedirectToAction("VerEmpleados");
+                return RedirectToAction("VerEmpleadosMin");
             }
         }
 
