@@ -26,8 +26,11 @@ namespace Rh.Controllers
                 Empleado_Curso empCur = new Empleado_Curso();
 
                 var empleado = db.Empleadoes.Where(x => x.NUM_RELOJ == numReloj).ToList();
+                DateTime now = DateTime.Now;
+
                 empCur.ID_CURSO = idCurso;
                 empCur.ID_EMPLEADO = empleado[0].ID_EMPLEADO;
+                empCur.FECHA = now;
                 db.Empleado_Curso.Add(empCur);
                 db.SaveChanges();
                 return View();
@@ -63,5 +66,35 @@ namespace Rh.Controllers
                 return RedirectToAction("BuscarCursosEmpleado");
             }
         }
+
+        [HttpGet]
+        public ActionResult Calificaciones()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult AsignarCalificacion(int id)
+        {
+            using (AndreTestContext db = new AndreTestContext())
+            {
+                Empleado_Curso empCur = db.Empleado_Curso.Find(id);
+                db.SaveChanges();
+                return View(empCur);
+            }
+        }
+
+        [HttpPost]
+        public ActionResult AsignarCalificacion(Empleado_Curso x)
+        {
+            using (AndreTestContext db = new AndreTestContext())
+            {
+                Empleado_Curso empCurso = db.Empleado_Curso.Find(x.ID_EMPLEADO_CURSO);
+                empCurso.CALIFICACION = x.CALIFICACION;
+                db.SaveChanges();
+                return RedirectToAction("BuscarCursosEmpleado");
+            }
+        }
+
     }
 }
