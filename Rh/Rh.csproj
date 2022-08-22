@@ -264,6 +264,8 @@
     <Content Include="Views\EmpleadoCurso\AsignarCursos.cshtml" />
     <Content Include="Views\EmpleadoCurso\BuscarCursosEmpleado.cshtml" />
     <Content Include="Views\EmpleadoCurso\VerCursosEmpleado.cshtml" />
+    <Content Include="Views\EmpleadoCurso\Calificaciones.cshtml" />
+    <Content Include="Views\EmpleadoCurso\AsignarCalificacion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
