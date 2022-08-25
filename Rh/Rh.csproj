@@ -153,13 +153,19 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\CursoController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\EmpleadoCursoController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\EmployeeCourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Course.cs">
+      <DependentUpon>ModelRh.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Curso.cs">
       <DependentUpon>ModelRh.tt</DependentUpon>
@@ -168,6 +174,12 @@
       <DependentUpon>ModelRh.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Empleado_Curso.cs">
+      <DependentUpon>ModelRh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee.cs">
+      <DependentUpon>ModelRh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee_Course.cs">
       <DependentUpon>ModelRh.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Instructor.cs">
@@ -266,6 +278,19 @@
     <Content Include="Views\EmpleadoCurso\VerCursosEmpleado.cshtml" />
     <Content Include="Views\EmpleadoCurso\Calificaciones.cshtml" />
     <Content Include="Views\EmpleadoCurso\AsignarCalificacion.cshtml" />
+    <Content Include="Views\Employee\AgregarExcel.cshtml" />
+    <Content Include="Views\Course\CrearCurso.cshtml" />
+    <Content Include="Views\Course\VerCursos.cshtml" />
+    <Content Include="Views\Course\EditarCurso.cshtml" />
+    <Content Include="Views\EmployeeCourse\AsignarCursos.cshtml" />
+    <Content Include="Views\EmployeeCourse\BuscarCursosEmpleado.cshtml" />
+    <Content Include="Views\EmployeeCourse\Calificaciones.cshtml" />
+    <Content Include="Views\EmployeeCourse\AsignarCalificacion.cshtml" />
+    <Content Include="Views\EmployeeCourse\VerCursosEmpleado.cshtml" />
+    <Content Include="Views\Employee\CrearEmpleado.cshtml" />
+    <Content Include="Views\Employee\VerEmpleadosMin.cshtml" />
+    <Content Include="Views\Employee\VerEmpleadosMax.cshtml" />
+    <Content Include="Views\Employee\EditarEmpleado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

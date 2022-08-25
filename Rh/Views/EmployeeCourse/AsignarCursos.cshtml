@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "AsignarCursos";
+}
+
+<h2>Asignar Cursos</h2>
+@using (Html.BeginForm("AsignarCursos", "EmployeeCourse"))
+{
+    <h3>Ingrese Número de Reloj</h3>
+    <input type="number" class="form-control" name="numReloj" required />
+    <h3>Ingrese el Id del curso</h3>
+    <input type="number" class="form-control" name="idCurso" required />
+    <h1></h1>
+    <input type="submit" class="btn btn-success" value="Agregar" onclick=" confirmacion()" />
+}
+<script type="text/javascript">
+    function confirmacion() {
+        alert("Curso asignado exitosamente");
+        location.reload();
+    }
+</script>
