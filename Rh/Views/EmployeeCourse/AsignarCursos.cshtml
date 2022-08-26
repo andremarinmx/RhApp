@@ -1,15 +1,29 @@
 ﻿
 @{
-    ViewBag.Title = "AsignarCursos";
+                /**/
+
+                ViewBag.Title = "AsignarCursos";
 }
 
 <h2>Asignar Cursos</h2>
 @using (Html.BeginForm("AsignarCursos", "EmployeeCourse"))
 {
+    <div class="form-group row">
+        <div class="col-md-9">
+            <select class="form-control" id="tipo" name="tipo" required="required" onchange="habilitar()">
+                <option value="Curso">Curso</option>
+                <option value="Paquete">Paquete</option>
+            </select>
+            <span class="field-validation-valid text-danger" data-valmsg-for="Tipo" data-valmsg-replace="true"></span>
+        </div>
+    </div>
     <h3>Ingrese Número de Reloj</h3>
     <input type="number" class="form-control" name="numReloj" required />
     <h3>Ingrese el Id del curso</h3>
-    <input type="number" class="form-control" name="idCurso" required />
+    <input type="number" class="form-control" name="idCurso" id="idCurso"/>
+    <h1></h1>
+    <h3>Ingrese el nombre del paquete</h3>
+    <input type="text" class="form-control" name="nombrePaquete" id="nombrePaquete"/>
     <h1></h1>
     <input type="submit" class="btn btn-success" value="Agregar" onclick=" confirmacion()" />
 }
@@ -17,5 +31,20 @@
     function confirmacion() {
         alert("Curso asignado exitosamente");
         location.reload();
+    }
+
+    function habilitar() {
+        let tipo = document.getElementById("tipo");
+        let nombrePaquete = document.getElementById("nombrePaquete");
+        let idCurso = document.getElementById("idCurso");
+
+        if (tipo.value == "Curso") {
+            nombrePaquete.hidden;
+        }
+        else {
+            if (tipo.value == "Paquete") {
+                idCurso.hidden;
+            }
+        }
     }
 </script>
