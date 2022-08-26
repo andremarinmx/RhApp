@@ -17,6 +17,14 @@ namespace Rh.Controllers
              new Employee_Course{ ID_CURSO = 7, CALIFICACION = 100},
         };
 
+        List<Employee_Course> Calidad = new List<Employee_Course>
+        {
+             new Employee_Course{ ID_CURSO = 9, CALIFICACION = 100},
+             new Employee_Course{ ID_CURSO = 11, CALIFICACION = 100},
+             new Employee_Course{ ID_CURSO = 13, CALIFICACION = 100},
+             new Employee_Course{ ID_CURSO = 14, CALIFICACION = 100},
+        };
+
         [HttpGet]
         public ActionResult AsignarCursos()
         {
@@ -35,16 +43,35 @@ namespace Rh.Controllers
                 var empleado = db.Employees.Where(x => x.EmployeeID == numReloj).ToList();
                 DateTime now = DateTime.Now;
 
-                if (nombrePaquete == "Induccion")
+                if(idCurso == null)
                 {
-                    foreach (var item in Induccion)
+                    switch (nombrePaquete)
                     {
-                        empCur.ID_CURSO = item.ID_CURSO;
-                        empCur.CALIFICACION = item.CALIFICACION;
-                        empCur.ID_EMPLEADO = empleado[0].ID;
-                        empCur.FECHA = now;
-                        db.Employee_Course.Add(empCur);
-                        db.SaveChanges();
+                        case "Induccion":
+                            foreach (var item in Induccion)
+                            {
+                                empCur.ID_CURSO = item.ID_CURSO;
+                                empCur.CALIFICACION = item.CALIFICACION;
+                                empCur.ID_EMPLEADO = empleado[0].ID;
+                                empCur.FECHA = now;
+                                db.Employee_Course.Add(empCur);
+                                db.SaveChanges();
+                            }
+                            break;
+                        case "Calidad":
+                            foreach (var item in Calidad)
+                            {
+                                empCur.ID_CURSO = item.ID_CURSO;
+                                empCur.CALIFICACION = item.CALIFICACION;
+                                empCur.ID_EMPLEADO = empleado[0].ID;
+                                empCur.FECHA = now;
+                                db.Employee_Course.Add(empCur);
+                                db.SaveChanges();
+                            }
+                            break;
+                        default:
+                            //curso inexistente
+                            break;
                     }
                 }
                 else
